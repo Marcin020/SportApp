@@ -1,20 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SportApp.LoginUI">
+             x:Class="SportApp.LoginUI" 
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
+        
         <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
-            <Image Source="aplikacja_logo.png" HorizontalOptions="Center" HeightRequest="200" WidthRequest="200"></Image>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             <Entry x:Name="txtUsername" Placeholder="Username" TextColor="#95877a" PlaceholderColor="#247158"></Entry>
             <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" TextColor="#95877a" PlaceholderColor="#247158"></Entry>
+            <!-- Login -->
             <Button VerticalOptions="Center" 
                     Margin="20,20,20,0" Text="Login" 
                     TextColor="#E4d5c7" 
                     BackgroundColor="#186049" 
                     CornerRadius="20" 
                     Clicked="Button_Clicked">
-                
             </Button>
+            <!-- Register -->
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
                     <FormattedString>

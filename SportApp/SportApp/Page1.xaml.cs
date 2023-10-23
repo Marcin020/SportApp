@@ -16,5 +16,9 @@ namespace SportApp
         {
             InitializeComponent();
         }
+        private async void ToolbarItem_Cliked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync($"//{nameof(LoginUI)}");
+        }
     }
 }
