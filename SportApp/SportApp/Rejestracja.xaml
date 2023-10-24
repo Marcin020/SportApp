@@ -1,12 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SportApp.Rejestracja">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+             x:Class="SportApp.Rejestracja" NavigationPage.HasNavigationBar="False">
+    <Grid RowDefinitions="*,*">
+        <StackLayout HorizontalOptions="Center">
+            <Label Text="Sign Up" FontSize="40" HorizontalTextAlignment="Center" FontFamily="Netropolis" TextColor="black" Margin="0,50,0,0"/>
+            
+            <Label Text="Add your details to sign up" CharacterSpacing="1" HorizontalTextAlignment="Center" FontSize="15" FontFamily="Metropolis" Margin="0,20,0,10"/>
+            
+            <Frame CornerRadius="30" Margin="0,40,0,0" WidthRequest="200" HasShadow="False" Background="#F2F2F2" BorderColor="#186049" >
+                <Entry FontSize="14" Placeholder="Username" PlaceholderColor="#B6B7B7" TextColor="black" />
+            </Frame>
+            
+            <Frame CornerRadius="30" Margin="0,10,0,0" WidthRequest="200"  HasShadow="False" Background="#F2F2F2" BorderColor="#186049" >
+                <Entry FontSize="14" HorizontalTextAlignment="Start"  Placeholder="Email" PlaceholderColor="#B6B7B7" TextColor="black"/>
+            </Frame>
+            
+            <Frame CornerRadius="30" Margin="0,10,0,0" WidthRequest="200"  HasShadow="False" Background="#F2F2F2" BorderColor="#186049" >
+                <Entry FontSize="14" HorizontalTextAlignment="Start"  Placeholder="Mobile No" PlaceholderColor="#B6B7B7" TextColor="black"/>
+            </Frame>
+            
+            <Frame CornerRadius="30" Margin="0,10,0,0" WidthRequest="200"  HasShadow="False" Background="#F2F2F2" BorderColor="#186049" >
+                <Entry FontSize="14" HorizontalTextAlignment="Start"  Placeholder="Password" PlaceholderColor="#B6B7B7" TextColor="black"/>
+            </Frame>
+
+            <Frame CornerRadius="30" Margin="0,10,0,0" WidthRequest="200" HasShadow="False" Background="#F2F2F2" BorderColor="#186049" >
+                <Entry FontSize="14" HorizontalTextAlignment="Start"  Placeholder="Confirm Password" PlaceholderColor="#B6B7B7" TextColor="black"/>
+            </Frame>
+            <Button Text="Sign Up" TextColor="White" CornerRadius="30" WidthRequest="200"  BackgroundColor="#186049"></Button>
+
         </StackLayout>
-    </ContentPage.Content>
+    </Grid>
 </ContentPage>

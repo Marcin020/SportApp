@@ -7,16 +7,6 @@
         
         <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             <Entry x:Name="txtUsername" Placeholder="Username" TextColor="#95877a" PlaceholderColor="#247158"></Entry>
             <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" TextColor="#95877a" PlaceholderColor="#247158"></Entry>
             <!-- Login -->
@@ -27,18 +17,7 @@
                     CornerRadius="20" 
                     Clicked="Button_Clicked">
             </Button>
-            <!-- Register -->
-            <Label HorizontalOptions="Center">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Nie posiadasz konta? " TextColor="#247158" />
-                        <Span Text="Zarejestruj się." TextColor="#247158" FontAttributes="Bold" TextDecorations="Underline"/>
-                    </FormattedString>
-                </Label.FormattedText>
-                <Label.GestureRecognizers>
-                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-            </Label.GestureRecognizers>
-            </Label>
+           
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -12,7 +12,7 @@ namespace SportApp
 
             //MainPage = new MainPage();
 
-            MainPage = new NavigationPage(new LoginUI());
+            MainPage = new NavigationPage(new Rejestracja());
         }
 
         protected override void OnStart()
