@@ -35,4 +35,8 @@
             </Button>
         </StackLayout>
     </ContentPage.Content>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout" Clicked="ToolbarItem_Cliked"/>
+    </ContentPage.ToolbarItems>
 </ContentPage>
