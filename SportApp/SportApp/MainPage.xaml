@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SportApp.MainPage"
+             x:Class="SportApp.MainPage" 
              NavigationPage.HasNavigationBar="False">
 
     <Grid RowDefinitions="*,*">
@@ -16,7 +16,11 @@
                             HorizontalOptions="Center" 
                             CornerRadius="30"
                             CharacterSpacing="1.5"
-                            Margin="0,0,0,10"/>
+                            Margin="0,0,0,10"
+                            Clicked="Button_Clicked_Login">
+                            
+                </Button>
+                            
 
                 <Button     Text="Create an account" 
                             WidthRequest="310" 
@@ -27,7 +31,9 @@
                             BorderWidth="1"
                             TextColor="#186049"
                             BackgroundColor="White"
-                            CharacterSpacing="1.5"/>
+                            CharacterSpacing="1.5"
+                            Clicked="Button_Cliked_Rejestracja"
+                            />
             </StackLayout>
 
         </StackLayout>
