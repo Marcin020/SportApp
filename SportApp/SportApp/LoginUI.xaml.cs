@@ -29,9 +29,5 @@ namespace SportApp
             }
         }
 
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new Rejestracja());
-        }
     }
 }

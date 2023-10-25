@@ -19,16 +19,19 @@
                     <Entry x:Name="txtPassword" IsPassword="True" FontSize="14"  Placeholder="Password" PlaceholderColor="#B6B7B7" TextColor="black" Margin="15,-30,0,-30"/>
                 </Frame>
 
-                <Button VerticalOptions="Center" 
+            </StackLayout>
+            <StackLayout Grid.Row="1">
+                 <Button VerticalOptions="Center" 
                     Margin="20,20,20,0" 
                     Text="Login" 
                     TextColor="White" 
                     BackgroundColor="#186049" 
                     CornerRadius="20" 
                     Clicked="Button_Clicked"
-                    CharacterSpacing="1">
+                    CharacterSpacing="1"
+                    Command="{Binding Login}">
                 </Button>
-
+                <Label Text="Forgot your password?" HorizontalTextAlignment="Center" Margin="0,10,0,0" HorizontalOptions="Center" FontSize="12"></Label>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

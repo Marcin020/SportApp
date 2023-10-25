@@ -20,5 +20,10 @@ namespace SportApp
         {
             await Shell.Current.GoToAsync($"//{nameof(LoginUI)}");
         }
+
+        private void ImageButton_Spacer(object sender, EventArgs e) 
+        {
+            Navigation.PushAsync(new Page3());
+        }
     }
 }
