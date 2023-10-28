@@ -14,6 +14,7 @@ namespace SportApp
     {
         public MainPage()
         {
+            
             InitializeComponent();
         }
 

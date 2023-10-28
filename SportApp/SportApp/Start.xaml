@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SportApp.Start"
+              NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <ImageButton Source="aplikacja_logo.png"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         HeightRequest="500"
+                            WidthRequest="500"
+                         BackgroundColor="Transparent"
+                         Margin="0,70,0,0"
+                         Clicked="ImageButton_Clicked_Start">
+
+            </ImageButton>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
