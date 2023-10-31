@@ -16,12 +16,32 @@ namespace SportApp
         {
             InitializeComponent();
         }
-        private async void ToolbarItem_Cliked(object sender, EventArgs e)
+        private void ToolbarItem_Cliked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync($"//{nameof(LoginUI)}");
+            Navigation.PushAsync(new MainPage());
         }
 
-        private void ImageButton_Spacer(object sender, EventArgs e) 
+        private void Button_Cliked_Walk(object sender, EventArgs e) 
+        {
+            Navigation.PushAsync(new Page3());
+        }
+        private void Button_Cliked_Run(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Page3());
+        }
+        private void Button_Cliked_Swim(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Page3());
+        }
+        private void Button_Cliked_Gym(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Page3());
+        }
+        private void Button_Cliked_Roller(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Page3());
+        }
+        private void Button_Cliked_Bike(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Page3());
         }

@@ -8,7 +8,7 @@
             android:TabbedPage.ToolbarPlacement="Bottom"
              x:Class="SportApp.Menu"
             BarBackgroundColor="#186049"
-            SelectedTabColor="#95877A"
+            SelectedTabColor="Black"
             UnselectedTabColor="#E4D5C7"
             >
     <sportapp:Page1 Title="Home" IconImageSource="menu.png"></sportapp:Page1>

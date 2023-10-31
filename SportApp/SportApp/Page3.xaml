@@ -4,9 +4,9 @@
              x:Class="SportApp.Page3">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="timerLabel" Text="0" HorizontalOptions="Center"></Label>
+            <Frame HorizontalOptions="Center" BorderColor="#186049" CornerRadius="30" HasShadow="True" HeightRequest="200" WidthRequest="200" Margin="30"></Frame>
+            <ImageButton Clicked="Button_Cliked_Go" HorizontalOptions="Center" Background="white" Source="start_button.png" WidthRequest="100" HeightRequest="100"></ImageButton>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

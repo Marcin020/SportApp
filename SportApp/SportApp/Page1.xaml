@@ -15,24 +15,25 @@
                 </Label.FormattedText>
             </Label>
 
+            <!-- Pierwszy wiersz z dwiema ikonkami -->
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                <ImageButton Source="walk.png" WidthRequest="150" HeightRequest="150" BackgroundColor="#247158" CornerRadius="30" Padding="10" Margin="0,30,10,0"></ImageButton>
+                <ImageButton Clicked="Button_Cliked_Walk" Source="walk.png" WidthRequest="120" HeightRequest="120" BackgroundColor="#247158" CornerRadius="30" Padding="10" Margin="0,30,60,0"></ImageButton>
 
-                <ImageButton Source="run.png" WidthRequest="150" HeightRequest="150" BackgroundColor="#247158" CornerRadius="30" Padding="10" Margin="0,30,10,0"></ImageButton>
+                <ImageButton Clicked="Button_Cliked_Run" Source="run.png" WidthRequest="120" HeightRequest="120" BackgroundColor="#247158" CornerRadius="30" Padding="10" Margin="0,30,10,0"></ImageButton>
             </StackLayout>
 
             <!-- Drugi wiersz z dwiema ikonkami -->
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                <ImageButton Source="bicyclist.png" WidthRequest="150" HeightRequest="150" BackgroundColor="#247158" CornerRadius="30" Padding="10" Margin="0,10,10,0"></ImageButton>
+                <ImageButton Clicked="Button_Cliked_Bike" Source="bicyclist.png" WidthRequest="120" HeightRequest="120" BackgroundColor="#247158" CornerRadius="30" Padding="10" Margin="0,20,60,0"></ImageButton>
 
-                <ImageButton Source="gym.png" WidthRequest="150" HeightRequest="150" BackgroundColor="#247158" CornerRadius="30" Padding="10" Margin="0,10,10,0"></ImageButton>
+                <ImageButton Clicked="Button_Cliked_Gym" Source="gym.png" WidthRequest="120" HeightRequest="120" BackgroundColor="#247158" CornerRadius="30" Padding="10" Margin="0,20,10,0"></ImageButton>
             </StackLayout>
 
             <!-- Trzeci wiersz z dwiema ikonkami -->
-            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                <ImageButton Source="rollerblade.png" WidthRequest="150" HeightRequest="150" BackgroundColor="#247158" CornerRadius="30" Padding="10" Margin="0,10,10,0"></ImageButton>
+            <StackLayout  Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <ImageButton Clicked="Button_Cliked_Roller" Source="rollerblade.png" WidthRequest="120" HeightRequest="120" BackgroundColor="#247158" CornerRadius="30" Padding="10" Margin="0,20,60,0"></ImageButton>
 
-                <ImageButton Source="swimming.png" WidthRequest="150" HeightRequest="150" BackgroundColor="#247158" CornerRadius="30" Padding="10" Margin="0,10,10,0"></ImageButton>
+                <ImageButton Clicked="Button_Cliked_Swim" Source="swimming.png" WidthRequest="120" HeightRequest="120" BackgroundColor="#247158" CornerRadius="30" Padding="10" Margin="0,20,10,0"></ImageButton>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
