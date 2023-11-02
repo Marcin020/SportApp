@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace SportApp
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page4 : ContentPage
-    {
-        public Page4()
-        {
-            InitializeComponent();
-        }
-    }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class Ustawienia : ContentPage
+	{
+		public Ustawienia ()
+		{
+			InitializeComponent ();
+		}
+	}
 }

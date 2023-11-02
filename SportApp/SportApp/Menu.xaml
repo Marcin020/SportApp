@@ -4,15 +4,16 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sportapp="clr-namespace:SportApp"
             mc:Ignorable="d"
+            xmlns:local="clr-namespace:SportApp"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
              x:Class="SportApp.Menu"
             BarBackgroundColor="#186049"
             SelectedTabColor="Black"
-            UnselectedTabColor="#E4D5C7"
-            >
-    <sportapp:Page1 Title="Home" IconImageSource="menu.png"></sportapp:Page1>
-    <sportapp:Page2 Title="Plan" IconImageSource="plan.png"></sportapp:Page2>
-    <sportapp:Page3 Title="Stoper" IconImageSource="stoper.png"></sportapp:Page3>
-    <sportapp:Page4 Title="Profil" IconImageSource="profil.png"></sportapp:Page4>
+            UnselectedTabColor="#E4D5C7">
+    
+    <local:Home Title="Home" IconImageSource="menu.png"></local:Home>
+    <sportapp:Dziennik  Title="Dziennik" IconImageSource="plan.png"></sportapp:Dziennik>
+    <sportapp:Trening Title="Trening" IconImageSource="stoper.png"></sportapp:Trening>
+    <sportapp:Profil Title="Profil" IconImageSource="profil.png"></sportapp:Profil>
 </TabbedPage>

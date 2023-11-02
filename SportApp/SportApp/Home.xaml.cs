@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace SportApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page1 : ContentPage
+    public partial class Home : ContentPage
     {
-        public Page1()
+        public Home()
         {
             InitializeComponent();
         }
@@ -21,29 +21,29 @@ namespace SportApp
             Navigation.PushAsync(new MainPage());
         }
 
-        private void Button_Cliked_Walk(object sender, EventArgs e) 
+        private async void Button_Cliked_Walk(object sender, EventArgs e) 
         {
-            Navigation.PushAsync(new Page3());
+            Navigation.PushAsync(new Trening());
         }
         private void Button_Cliked_Run(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Page3());
+            Navigation.PushAsync(new Trening());
         }
         private void Button_Cliked_Swim(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Page3());
+            Navigation.PushAsync(new Trening());
         }
         private void Button_Cliked_Gym(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Page3());
+            Navigation.PushAsync(new Trening());
         }
         private void Button_Cliked_Roller(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Page3());
+            Navigation.PushAsync(new Trening());
         }
         private void Button_Cliked_Bike(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Page3());
+            Navigation.PushAsync(new Trening());
         }
     }
 }

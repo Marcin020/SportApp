@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SportApp.ZmianaHasla">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Change Password"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   FontSize="Large"/>
+            <Entry Placeholder="Password" x:Name="TxtPassword"></Entry>
+            <Entry Placeholder="Confirm password" x:Name="TxtConfirm"></Entry>
+            <Button Text="Change Password" x:Name="BtnChangePassword"
+                    Clicked="ButtonCliked_ChangePassword"
+                    TextColor="White" 
+                    BackgroundColor="#186049" 
+                    CornerRadius="20" 
+                    VerticalOptions="Center" 
+                    Margin="20,20,20,0">
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

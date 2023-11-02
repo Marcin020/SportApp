@@ -19,7 +19,9 @@ namespace SportApp
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            if(txtUsername.Text == "admin" && txtPassword.Text == "12345")
+            string userName = txtUsername.Text;
+            string password = txtPassword.Text;
+            if (txtUsername.Text == "admin" && txtPassword.Text == "12345")
             {
                 Navigation.PushAsync(new Menu());
             }
