@@ -1,13 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable ="d"
              x:Class="SportApp.Trening"
-             Title="Trening">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label x:Name="timerLabel" Text="0" HorizontalOptions="Center"></Label>
-            <Frame HorizontalOptions="Center" BorderColor="#186049" CornerRadius="30" HasShadow="True" HeightRequest="200" WidthRequest="200" Margin="30"></Frame>
-            <ImageButton Clicked="Button_Cliked_Go" HorizontalOptions="Center" Background="white" Source="start_button.png" WidthRequest="100" HeightRequest="100"></ImageButton>
+             Title="Home"
+             BackgroundColor="White">
+
+    <StackLayout>
+        <Label x:Name="activityLabel" FontSize="40" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold">
+        </Label>
+        
+        
+        <!-- Dystans -->
+        <Label x:Name="dystansLabel" Text="{Binding Dystans}" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="80"></Label>
+        <Label Text="km" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" TextColor="Black" Margin="10,0,10,15"></Label>
+        
+        <!-- Czas -->
+
+        <Label x:Name="timerLabel" Text="{Binding Duration}" TextColor="Black" FontSize="50" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+        <Label Text="time" FontSize="20" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" Margin="10,0,10,15"/>
+        
+        <!-- Kcal -->
+
+        <Label x:Name="kcalLabel" Text="{Binding Kcal}" FontSize="50" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+        <Label Text="kcal" FontSize="20" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" Margin="10,0,10,100" />
+        
+        <!-- Przyciski -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Go" Command="{Binding StartTimerCommand}" Margin="5,0" BackgroundColor="Black" TextColor="White"  FontSize="20" FontAttributes="Bold" WidthRequest="100" HeightRequest="100" CornerRadius="50" HorizontalOptions="Center"/>
+            <Button Text="Stop" Command="{Binding StopTimerCommand}" Margin="5,0" BackgroundColor="Black" TextColor="White"  FontSize="20" FontAttributes="Bold" WidthRequest="100" HeightRequest="100" CornerRadius="50" HorizontalOptions="Center"/>
+            <Button Text="Pause" Command="{Binding PauseTimerCommand}" Margin="5,0" BackgroundColor="Black" TextColor="White"  FontSize="20" FontAttributes="Bold" WidthRequest="100" HeightRequest="100" CornerRadius="50" HorizontalOptions="Center"/>
         </StackLayout>
-    </ContentPage.Content>
+    </StackLayout>
 </ContentPage>

@@ -9,20 +9,39 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Timers;
+using System.Windows.Input;
 
 namespace SportApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Trening : ContentPage
     {
+
+        private TestPageViewModel _viewModel;
+
+        private string selectedActivity = "Aktywność";
+        
         public Trening()
         {
             InitializeComponent();
+            UpdateActivityLabel();
+            _viewModel = new TestPageViewModel();
+            BindingContext = _viewModel;
         }
 
-        private void Button_Cliked_Go(object sender, EventArgs e)
+        public Trening(string activity) : this()
         {
-            Navigation.PushAsync(new Home());
+            selectedActivity = activity;
+            UpdateActivityLabel();
         }
+
+        private void UpdateActivityLabel()
+        {
+            activityLabel.Text = selectedActivity;
+        }
+
+        public ICommand StartTimerCommand { get; set; }
+
+        
     }
 }
