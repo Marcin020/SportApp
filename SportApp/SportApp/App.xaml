@@ -107,6 +107,12 @@
                         Value="{AppThemeBinding Dark={StaticResource CardBackgroundDark},
                     Light={StaticResource CardBackground}}"/>
             </Style>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="White" />
+                <!-- Ustaw kolor tła paska nawigacyjnego -->
+                <Setter Property="BarTextColor" Value="black" />
+                <!-- Ustaw kolor tekstu na pasku nawigacyjnym -->
+            </Style>
 
             <x:String x:Key="IconCoffee">&#xf0f4;</x:String>
         </ResourceDictionary>

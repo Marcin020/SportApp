@@ -21,29 +21,35 @@ namespace SportApp
             Navigation.PushAsync(new MainPage());
         }
 
-        private async void Button_Cliked_Walk(object sender, EventArgs e) 
+        private void Button_Cliked_Walk(object sender, EventArgs e) 
         {
-            Navigation.PushAsync(new Trening());
+            string selectedActivity = "Walking";
+            Navigation.PushAsync(new Trening(selectedActivity));
         }
         private void Button_Cliked_Run(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Trening());
+            string selectedActivity = "Running";
+            Navigation.PushAsync(new Trening(selectedActivity));
         }
         private void Button_Cliked_Swim(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Trening());
+            string selectedActivity = "Swimming";
+            Navigation.PushAsync(new Trening(selectedActivity));
         }
         private void Button_Cliked_Gym(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Trening());
+            string selectedActivity = "Gym";
+            Navigation.PushAsync(new Trening(selectedActivity));
         }
-        private void Button_Cliked_Roller(object sender, EventArgs e)
+        private void Button_Cliked_Rolls(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Trening());
+            string selectedActivity = "Roller blading";
+            Navigation.PushAsync(new Trening(selectedActivity));
         }
         private void Button_Cliked_Bike(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Trening());
+            string selectedActivity = "Cycling";
+            Navigation.PushAsync(new Trening(selectedActivity));
         }
     }
 }
