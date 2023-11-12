@@ -10,7 +10,7 @@ namespace SportApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage( new Start());
+            MainPage = new NavigationPage( new LoginUI());
         }
 
         protected override void OnStart()

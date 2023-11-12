@@ -1,11 +1,14 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SportApp.Tables;
 
 namespace SportApp
 {
@@ -17,17 +20,30 @@ namespace SportApp
             InitializeComponent();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        async void Button_Clicked_Login(object sender, EventArgs e)
         {
-            string userName = txtUsername.Text;
-            string password = txtPassword.Text;
-            if (txtUsername.Text == "admin" && txtPassword.Text == "12345")
+            var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDatabase.db");
+            var db = new SQLiteConnection(dbpath);
+            var myquery = db.Table<RegUserTable>().Where(u=>u.UserName.Equals(EntryUser.Text) && u.Password.Equals(EntryPassword.Text)).FirstOrDefault();
+
+            if (myquery != null)
             {
-                Navigation.PushAsync(new Menu());
+                App.Current.MainPage = new NavigationPage(new Home());
             }
             else
             {
-                DisplayAlert("Ostrzeżenie", "Login lub hasło jest niepoprawne", "Ok");
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    var result = await this.DisplayAlert("Error", "Zła nazwa użytkownika lub hasło", "Yes", "Cancel");
+
+                    if (result)
+                        await Navigation.PushAsync(new LoginUI());
+                    else
+                    {
+                        await Navigation.PushAsync(new LoginUI());
+                    }
+                }
+            );
             }
         }
 

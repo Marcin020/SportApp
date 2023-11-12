@@ -42,6 +42,8 @@ namespace SportApp
             {
                 var result = await this.DisplayAlert("Congratulations", "Your account has been created", "Yes", "Cancel");
 
+                if (result)
+                    await Navigation.PushAsync(new LoginUI());
             }
             );
         }

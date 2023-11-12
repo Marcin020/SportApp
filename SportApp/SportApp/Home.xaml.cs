@@ -16,9 +16,9 @@ namespace SportApp
         {
             InitializeComponent();
         }
-        private void ToolbarItem_Cliked(object sender, EventArgs e)
+        async void ToolbarItem_Cliked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MainPage());
+            await Navigation.PushAsync(new LoginUI());
         }
 
         private void Button_Cliked_Walk(object sender, EventArgs e) 
