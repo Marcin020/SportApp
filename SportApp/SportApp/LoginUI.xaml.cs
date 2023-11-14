@@ -20,7 +20,7 @@ namespace SportApp
             InitializeComponent();
         }
 
-        async void Button_Clicked_Login(object sender, EventArgs e)
+        void Button_Clicked_Login(object sender, EventArgs e)
         {
             var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDatabase.db");
             var db = new SQLiteConnection(dbpath);
