@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-
+using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using System.Timers;
-using System.Windows.Input;
 
 namespace SportApp
 {
@@ -20,7 +12,7 @@ namespace SportApp
         private TestPageViewModel _viewModel;
 
         private string selectedActivity = "Aktywność";
-        
+
         public Trening()
         {
             InitializeComponent();
@@ -40,8 +32,10 @@ namespace SportApp
             activityLabel.Text = selectedActivity;
         }
 
+  
+
         public ICommand StartTimerCommand { get; set; }
 
-        
+
     }
 }

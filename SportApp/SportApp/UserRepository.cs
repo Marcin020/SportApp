@@ -1,14 +1,6 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-
-namespace SportApp
+﻿namespace SportApp
 {
-    public class UserRepository 
+    public class UserRepository
     {
         string webAPIKey = "";
     }

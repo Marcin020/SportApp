@@ -14,6 +14,5 @@
     
     <local:Home Title="Home" IconImageSource="menu.png"></local:Home>
     <sportapp:Dziennik  Title="Dziennik" IconImageSource="plan.png"></sportapp:Dziennik>
-    <sportapp:Trening Title="Trening" IconImageSource="stoper.png"></sportapp:Trening>
     <sportapp:Profil Title="Profil" IconImageSource="profil.png"></sportapp:Profil>
 </TabbedPage>

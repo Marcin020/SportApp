@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -23,12 +19,12 @@ namespace SportApp
             {
                 string password = TxtPassword.Text;
                 string confirmPass = TxtConfirm.Text;
-                if(string.IsNullOrEmpty(password))
+                if (string.IsNullOrEmpty(password))
                 {
-                    DisplayAlert("Change Password", "Please type password","Ok");
+                    DisplayAlert("Change Password", "Please type password", "Ok");
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
 
             }

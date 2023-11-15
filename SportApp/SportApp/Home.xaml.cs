@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -21,7 +17,7 @@ namespace SportApp
             await Navigation.PushAsync(new LoginUI());
         }
 
-        private void Button_Cliked_Walk(object sender, EventArgs e) 
+        private void Button_Cliked_Walk(object sender, EventArgs e)
         {
             string selectedActivity = "Walking";
             Navigation.PushAsync(new Trening(selectedActivity));

@@ -1,14 +1,9 @@
-﻿using SQLite;
+﻿using SportApp.Tables;
+using SQLite;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using SportApp.Tables;
 
 namespace SportApp
 {
@@ -24,7 +19,7 @@ namespace SportApp
         {
             var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDatabase.db");
             var db = new SQLiteConnection(dbpath);
-            var myquery = db.Table<RegUserTable>().Where(u=>u.UserName.Equals(EntryUser.Text) && u.Password.Equals(EntryPassword.Text)).FirstOrDefault();
+            var myquery = db.Table<RegUserTable>().Where(u => u.UserName.Equals(EntryUser.Text) && u.Password.Equals(EntryPassword.Text)).FirstOrDefault();
 
             if (myquery != null)
             {
