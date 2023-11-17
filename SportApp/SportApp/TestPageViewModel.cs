@@ -16,6 +16,7 @@ namespace SportApp
         private bool _isRunning;
         private string _selectedActivity;
 
+
         public string SelectedActivity
         {
             get { return _selectedActivity; }
@@ -91,6 +92,7 @@ namespace SportApp
             {
 
                 ResetTimer();
+                ResetKcal();
             }
             else
             {
@@ -111,6 +113,11 @@ namespace SportApp
             _hours = 0;
             Duration = $"{_hours:D2}:{_minutes:D2}:{_seconds:D2}";
         } 
+
+        private void ResetKcal()
+        {
+            Kcal = 0;
+        }
         
         private double GetMetValueForActivity(string activity)
         {
@@ -120,7 +127,7 @@ namespace SportApp
                     return 7.0;
                 case "Walking":
                     return 2.0;
-                case "Rollerblading":
+                case "Roller blading":
                     return 5.0;
                 case "Swimming":
                     return 5.0;

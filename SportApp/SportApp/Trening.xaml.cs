@@ -11,7 +11,7 @@ namespace SportApp
 
         private TestPageViewModel _viewModel;
 
-        private string selectedActivity = "Aktywność";
+        public string selectedActivity = "Aktywność";
 
         public Trening()
         {
@@ -23,6 +23,7 @@ namespace SportApp
 
         public Trening(string activity) : this()
         {
+            _viewModel.SelectedActivity = activity;
             selectedActivity = activity;
             UpdateActivityLabel();
         }
