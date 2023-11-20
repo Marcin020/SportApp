@@ -30,7 +30,8 @@ namespace SportApp
                 Height = EntryUserHeight.Text,
                 Weight = EntryUserWeight.Text
 
-            };
+
+        };
 
             db.Insert(item);
             Device.BeginInvokeOnMainThread(async () =>

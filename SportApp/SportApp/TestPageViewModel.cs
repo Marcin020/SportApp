@@ -140,10 +140,14 @@ namespace SportApp
 
         private void UpdateBurnedCalories(double metValue)
         {
-            double bodyWeight = 70;
-            double durationInHours = _hours + _minutes / 60.0 + _seconds / 3600.0;
+            if(_isRunning) 
+            { 
+                double bodyWeight = 70;
+                double durationInHours = _hours + _minutes / 60.0 + _seconds / 3600.0;
 
-            Kcal = Math.Round( bodyWeight * durationInHours * metValue);
+                Kcal = Math.Round( bodyWeight * durationInHours * metValue);
+            }
+            
         }
 
 
