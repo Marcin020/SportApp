@@ -1,6 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace SportApp
 {
@@ -10,7 +8,7 @@ namespace SportApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage( new Menu());
+            MainPage = new NavigationPage(new Menu());
         }
 
         protected override void OnStart()

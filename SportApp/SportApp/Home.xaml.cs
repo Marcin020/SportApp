@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -16,12 +12,12 @@ namespace SportApp
         {
             InitializeComponent();
         }
-        private void ToolbarItem_Cliked(object sender, EventArgs e)
+        async void ToolbarItem_Cliked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MainPage());
+            await Navigation.PushAsync(new LoginUI());
         }
 
-        private void Button_Cliked_Walk(object sender, EventArgs e) 
+        private void Button_Cliked_Walk(object sender, EventArgs e)
         {
             string selectedActivity = "Walking";
             Navigation.PushAsync(new Trening(selectedActivity));
