@@ -34,8 +34,7 @@ namespace SportApp
         }
         private void Button_Cliked_Gym(object sender, EventArgs e)
         {
-            string selectedActivity = "Gym";
-            Navigation.PushAsync(new Trening(selectedActivity));
+            Navigation.PushAsync(new Wybor());
         }
         private void Button_Cliked_Rolls(object sender, EventArgs e)
         {
