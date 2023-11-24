@@ -1,20 +1,60 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace SportApp
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Weight : ContentPage
-	{
-		public Weight ()
-		{
-			InitializeComponent ();
-		}
-	}
+    public partial class Weight : ContentPage
+    {
+        public Weight()
+        {
+            InitializeComponent();
+        }
+
+        private void PlusButtonClicked(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            var entry = GetEntryForButton(button);
+
+            IncreaseEntryValue(entry);
+        }
+
+        private void MinusButtonClicked(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            var entry = GetEntryForButton(button);
+
+            DecreaseEntryValue(entry);
+        }
+
+        private Entry GetEntryForButton(Button button)
+        {
+            switch (button.ClassId)
+            {
+                case "Series":
+                    return seriesEntry;
+                case "Repeat":
+                    return repeatEntry;
+                case "Weight":
+                    return weightEntry;
+                default:
+                    return null;
+            }
+        }
+
+        private void IncreaseEntryValue(Entry entry)
+        {
+            if (int.TryParse(entry.Text, out int currentValue))
+            {
+                entry.Text = (currentValue + 1).ToString();
+            }
+        }
+
+        private void DecreaseEntryValue(Entry entry)
+        {
+            if (int.TryParse(entry.Text, out int currentValue))
+            {
+                entry.Text = (currentValue > 0) ? (currentValue - 1).ToString() : "0";
+            }
+        }
+    }
 }
