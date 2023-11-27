@@ -8,7 +8,7 @@ namespace SportApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Weight());
+            MainPage = new NavigationPage(new Menu());
         }
 
         protected override void OnStart()

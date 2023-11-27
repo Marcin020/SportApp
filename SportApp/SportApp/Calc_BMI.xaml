@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SportApp.Calc_BMI">
+    <ContentPage.Resources>
+        <Color x:Key="FunGreen">#186049</Color>
+        <Color x:Key="Tradewind">#6AB29B</Color>
+        <Color x:Key="Eden">#247158</Color>
+        <Color x:Key="RichBlack">#00171F</Color>
+
+        <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="TextColor" Value="{StaticResource RichBlack}" />
+            <Setter Property="FontFamily" Value="Comfortaa" />
+        </Style>
+        <Style x:Key="TitleStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
+            <Setter Property="FontSize" Value="Header" />
+        </Style>
+        <Style x:Key="ValueStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
+            <Setter Property="FontSize" Value="Title" />
+            <Setter Property="TextColor" Value="{StaticResource Eden}" />
+        </Style>
+        <Style TargetType="Slider">
+            <Setter Property="ThumbColor" Value="{StaticResource FunGreen}"/>
+            <Setter Property="MinimumTrackColor" Value="{StaticResource FunGreen}"/>
+            <Setter Property="MaximumTrackColor" Value="{StaticResource Tradewind}" />
+        </Style>
+    </ContentPage.Resources>
+    <FlexLayout Direction="Column" JustifyContent="SpaceEvenly" Padding="40">
+        <StackLayout>
+            <Label Text="Calculator BMI" Style="{StaticResource TitleStyle}" FontSize="Large" Margin="0,0,0,30"/>
+            <Label Text="Height (cm)" Style="{StaticResource TitleStyle}" />
+            <Label Text="{Binding Source={x:Reference HeightSlider}, Path=Value, StringFormat='{0:F0} cm'}" Style="{StaticResource ValueStyle}"/>
+            <Slider x:Name="HeightSlider" Maximum="220" Minimum="40" Value="{Binding Height}"/>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="Weight (kg)" Style="{StaticResource TitleStyle}" />
+            <Label Text="{Binding Source={x:Reference WeightSlider}, Path=Value, StringFormat='{0:F0} kg'}" Style="{StaticResource ValueStyle}"/>
+            <Slider x:Name="WeightSlider" Maximum="300" Minimum="40" Value="{Binding Weight}"/>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="Your BMI is" Style="{StaticResource LabelStyle}"/>
+            <Label Text="{Binding BMI}" FontSize="48" Style="{StaticResource LabelStyle}"/>
+            <Label Text="{Binding Classification}" Style="{StaticResource LabelStyle}"/>
+        </StackLayout>
+    </FlexLayout>
+</ContentPage>

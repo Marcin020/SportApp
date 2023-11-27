@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace SportApp
@@ -10,7 +11,9 @@ namespace SportApp
         {
             InitializeComponent();
         }
-
-
+        async void Button_Cliked_BMI(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Calc_BMI());
+        }
     }
 }

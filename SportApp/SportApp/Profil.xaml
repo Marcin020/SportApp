@@ -5,9 +5,8 @@
              Title="Profil">
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Zmień hasło" CornerRadius="40" Margin="10,50,10,0" CharacterSpacing="1"></Button>
-            <Button Text="Zmień login"  CornerRadius="40" Margin="10,20,10,0" CharacterSpacing="1"></Button>
-            <Button Text="Tryb"  CornerRadius="40" Margin="10,20,10,0" CharacterSpacing="1" ></Button>
+            <Button Text="Kalkulator BMI" CornerRadius="40" Margin="10,50,10,0" CharacterSpacing="1" BackgroundColor="#186049" TextColor="#B6B7B7" Clicked="Button_Cliked_BMI" ></Button>
+            <Button Text="Tryb"  CornerRadius="40" Margin="10,20,10,0" CharacterSpacing="1" BackgroundColor="#186049" TextColor="#B6B7B7" ></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
