@@ -5,9 +5,12 @@ namespace SportApp
 {
     public partial class Weight : ContentPage
     {
-        public Weight()
+        private string _exerciseName;
+        public Weight(string exerciseName)
         {
             InitializeComponent();
+            this._exerciseName = exerciseName;
+            exerciseLabel.Text = exerciseName;
         }
 
         private void PlusButtonClicked(object sender, EventArgs e)

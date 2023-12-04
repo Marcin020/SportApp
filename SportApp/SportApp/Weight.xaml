@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout Margin="20" >
             
-            <Label Text="Jakies cwiczenie" FontSize="30" HorizontalOptions="Center" />
+            <Label x:Name="exerciseLabel" Text="Jakies cwiczenie" FontSize="30" HorizontalOptions="Center" />
 
            
            
