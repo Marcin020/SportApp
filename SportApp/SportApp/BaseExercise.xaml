@@ -4,55 +4,14 @@
              x:Class="SportApp.BaseExercise"
              Title="Base Exercise">
     <ScrollView>
-        <StackLayout>
-            <ListView SeparatorColor="#186049" ItemTapped="OnItemTapped">
+        <StackLayout Margin="20">
+            <SearchBar x:Name="exerciseSearchBar" Placeholder="Search Exercise" TextChanged="OnExerciseSearchChanged" />
+            <ListView x:Name="myListView" SeparatorColor="#186049" ItemTapped="OnItemTapped" Refreshing="myListView_Refreshing" IsPullToRefreshEnabled="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal" Padding="10">
-                                <Label Text="{Binding .}" TextColor="Black" FontSize="Medium" VerticalOptions="Center" />
-                            </StackLayout>
-                        </ViewCell>
+                        <TextCell Text="{Binding Name}" TextColor="Black" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
-                <ListView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Ab Crunches</x:String>
-                        <x:String>Alternating Dumbbell Curl</x:String>
-                        <x:String>Arnold Press</x:String>
-                        <x:String>Assisted Pull-Ups</x:String>
-                        <x:String>Air Squats</x:String>
-                        <x:String>Australian Pull-Ups</x:String>
-                        <x:String>Archer Rows</x:String>
-                        <x:String>Alternating Side Planks</x:String>
-                        <x:String>Alternating Heel Touches</x:String>
-                        <x:String>Around the World Dumbbell Snatch</x:String>
-                        <x:String>Alternating Dumbbell Bench Press</x:String>
-                        <x:String>Alternating Dumbbell Row</x:String>
-                        <x:String>Alternating Dumbbell Shoulder Press</x:String>
-                        <x:String>Alternating Dumbbell Snatch</x:String>
-                        <x:String>Alternating Dumbbell Triceps Extension</x:String>
-                        <x:String>Air Bike</x:String>
-                        <x:String>Barbell Squats</x:String>
-                        <x:String>Barbell Bench Press</x:String>
-                        <x:String>Barbell Deadlift</x:String>
-                        <x:String>Barbell Hip Thrust</x:String>
-                        <x:String>Barbell Row</x:String>
-                        <x:String>Barbell Shoulder Press</x:String>
-                        <x:String>Barbell Shrug</x:String>
-                        <x:String>Barbell Triceps Extension</x:String>
-                        <x:String>Bicep Curls</x:String>
-                        <x:String>Bicycle Crunches</x:String>
-                        <x:String>Box Jumps</x:String>
-                        <x:String>Burpees</x:String>
-                        <x:String>Butterfly Sit-Ups</x:String>
-                        <x:String>Back Extensions</x:String>
-                        <x:String>Chin-Ups</x:String>
-                        <x:String>Cable Crunches</x:String>
-                        <x:String>Crab Walk</x:String>
-                        <x:String>Clapping Push-Ups</x:String>
-                    </x:Array>
-                </ListView.ItemsSource>
             </ListView>
     </StackLayout>
 </ScrollView>

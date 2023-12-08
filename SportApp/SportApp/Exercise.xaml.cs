@@ -15,6 +15,10 @@ namespace SportApp
     {
         public string selectedTraining;
 
+        public string Series { get; }
+        public string Repeat { get; }
+        public string Weight { get; }
+
         public Exercise(string selectedTraining)
         {
             InitializeComponent();
@@ -22,6 +26,12 @@ namespace SportApp
             UpdateActivityLabel();
         }
 
+        public Exercise(string selectedTraining, string series, string repeat, string weight) : this(selectedTraining)
+        {
+            Series = series;
+            Repeat = repeat;
+            Weight = weight;
+        }
 
         private void UpdateActivityLabel()
         {

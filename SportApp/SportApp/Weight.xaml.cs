@@ -59,5 +59,14 @@ namespace SportApp
                 entry.Text = (currentValue > 0) ? (currentValue - 1).ToString() : "0";
             }
         }
+
+        private void OnButtonClicked_Add(object sender, EventArgs e)
+        // this method send name of exercise , series, repeat and weight to page "Exercise"
+        {
+            var series = seriesEntry.Text;
+            var repeat = repeatEntry.Text;
+            var weight = weightEntry.Text;
+            Navigation.PushAsync(new Exercise(_exerciseName, series, repeat, weight));
+        }
     }
 }
