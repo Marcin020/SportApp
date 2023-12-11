@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using Xamarin.Forms;
 
 namespace SportApp
@@ -61,12 +62,22 @@ namespace SportApp
         }
 
         private void OnButtonClicked_Add(object sender, EventArgs e)
-        // this method send name of exercise , series, repeat and weight to page "Exercise"
         {
             var series = seriesEntry.Text;
             var repeat = repeatEntry.Text;
             var weight = weightEntry.Text;
-            Navigation.PushAsync(new Exercise(_exerciseName, series, repeat, weight));
+            var exerciseName = exerciseLabel.Text;
+
+            var exerciseItem = new ExerciseItem
+            {
+                Name = exerciseName,
+                Reps = repeat,
+                Sets = series,
+                Weight = weight
+            };
+
+            (ListView.ItemsSource as ObservableCollection<ExerciseItem>)?.Add(exerciseItem);
         }
+
     }
 }

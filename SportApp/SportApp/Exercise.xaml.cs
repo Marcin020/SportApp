@@ -19,6 +19,8 @@ namespace SportApp
         public string Repeat { get; }
         public string Weight { get; }
 
+        public string ExerciseName { get; }
+
         public Exercise(string selectedTraining)
         {
             InitializeComponent();
@@ -26,11 +28,13 @@ namespace SportApp
             UpdateActivityLabel();
         }
 
-        public Exercise(string selectedTraining, string series, string repeat, string weight) : this(selectedTraining)
+        public Exercise(string exerciseName, string series, string repeat, string weight) : this(exerciseName)
         {
+            
             Series = series;
             Repeat = repeat;
             Weight = weight;
+            ExerciseName = exerciseName;
         }
 
         private void UpdateActivityLabel()
@@ -38,9 +42,15 @@ namespace SportApp
             trainingLabel.Text = selectedTraining;
         }
 
-        private async void OnImageButtonClicked_Plus(object sender, EventArgs e)
+       private void OnImageButtonClicked_Plus(object sender, EventArgs e)
         {
+            
             Navigation.PushAsync(new BaseExercise());
+        }
+
+        private void OnImageButtonClicked_Delete(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
         }
     }
 }

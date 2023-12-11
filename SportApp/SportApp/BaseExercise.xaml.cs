@@ -176,7 +176,7 @@ namespace SportApp
                 myListView.ItemsSource = myList;
             }
             else
-            {//ignore case , search by letters in the name of the exercise and return the result
+            {
 				myListView.ItemsSource = myList.Where(i => i.Name.ToLower().Contains(e.NewTextValue.ToLower()));
 
                 
@@ -186,7 +186,7 @@ namespace SportApp
 
         private void OnItemTapped(object sender, ItemTappedEventArgs e)
 		{
-			// send to next page
+			
 			var exercise = e.Item as UserInfo;
 			Navigation.PushAsync(new Weight(exercise.Name));
 		}

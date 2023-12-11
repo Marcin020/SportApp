@@ -15,8 +15,19 @@
                     RelativeLayout.HeightConstraint="50">
                     <Label x:Name="trainingLabel" FontSize="25" CharacterSpacing="1" TextColor="Black" Margin="0,-3,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
                 </Frame>
+                <Button  Text="SAVE"
+                          CornerRadius="50"
+                          FontSize="30"
+                          TextColor="White"
+                          BackgroundColor="#247158"
+                          RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-370}"
+                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-120}"
+                          RelativeLayout.WidthConstraint="100"
+                          RelativeLayout.HeightConstraint="100"
+                          Clicked="OnImageButtonClicked_Plus">
+                </Button>
 
-                <Button      Text="ADD"
+                <Button  Text="ADD"
                          CornerRadius="50"
                          FontSize="30"
                          TextColor="White"
@@ -28,9 +39,22 @@
                          Clicked="OnImageButtonClicked_Plus">
                 </Button>
             </RelativeLayout>
-            <ListView> //here need to add items like part of list not label
-                
-                
+            <ListView>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name}" FontSize="20" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                <Label Text="{Binding Reps}" FontSize="20" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                <Label Text="{Binding Sets}" FontSize="20" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                <Label Text="{Binding Weight}" FontSize="20" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+
             </ListView>
         </StackLayout>
 
