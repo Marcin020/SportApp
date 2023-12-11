@@ -190,7 +190,5 @@ namespace SportApp
 			var exercise = e.Item as UserInfo;
 			Navigation.PushAsync(new Weight(exercise.Name));
 		}
-
-
     }
 }
