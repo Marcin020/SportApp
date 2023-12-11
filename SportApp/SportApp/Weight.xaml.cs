@@ -61,7 +61,7 @@ namespace SportApp
             }
         }
 
-        private void OnButtonClicked_Add(object sender, EventArgs e)
+        /*private void OnButtonClicked_Add(object sender, EventArgs e)
         {
             var series = seriesEntry.Text;
             var repeat = repeatEntry.Text;
@@ -77,7 +77,7 @@ namespace SportApp
             };
 
             (ListView.ItemsSource as ObservableCollection<ExerciseItem>)?.Add(exerciseItem);
-        }
+        }*/
 
     }
 }

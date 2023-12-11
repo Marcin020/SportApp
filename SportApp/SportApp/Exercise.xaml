@@ -1,25 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SportApp.Exercise">
+             x:Class="SportApp.Exercise"
+             BackgroundColor="{AppThemeBinding Dark=Black, Light=White }">
     <ContentPage.Content>
         <StackLayout>
 
             <RelativeLayout>
-                <Frame BorderColor="#247158"
+                <Frame BorderColor="{AppThemeBinding Dark=#6AB29B, Light=#247158 }"
                     CornerRadius="60"
                     Padding="11"
                     RelativeLayout.XConstraint="50"
                     RelativeLayout.YConstraint="15"
                     RelativeLayout.WidthConstraint="300"
                     RelativeLayout.HeightConstraint="50">
-                    <Label x:Name="trainingLabel" FontSize="25" CharacterSpacing="1" TextColor="Black" Margin="0,-3,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                    <Label x:Name="trainingLabel" FontSize="25" CharacterSpacing="1" TextColor="{AppThemeBinding Dark=White, Light=Black }" Margin="0,-3,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
                 </Frame>
                 <Button  Text="SAVE"
                           CornerRadius="50"
                           FontSize="30"
-                          TextColor="White"
-                          BackgroundColor="#247158"
+                          TextColor="{AppThemeBinding Dark=Black, Light=White }"
+                          BackgroundColor="{AppThemeBinding Dark=#6AB29B, Light=#247158 }"
                           RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-370}"
                           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-120}"
                           RelativeLayout.WidthConstraint="100"
@@ -30,8 +31,8 @@
                 <Button  Text="ADD"
                          CornerRadius="50"
                          FontSize="30"
-                         TextColor="White"
-                         BackgroundColor="#247158"
+                         TextColor="{AppThemeBinding Dark=Black, Light=White }"
+                         BackgroundColor="{AppThemeBinding Dark=#6AB29B, Light=#247158 }"
                          RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-120}"
                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-120}"
                          RelativeLayout.WidthConstraint="100"
@@ -44,10 +45,10 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding Name}" FontSize="20" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
-                                <Label Text="{Binding Reps}" FontSize="20" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
-                                <Label Text="{Binding Sets}" FontSize="20" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
-                                <Label Text="{Binding Weight}" FontSize="20" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                <Label Text="{Binding Name}" FontSize="20" TextColor="{AppThemeBinding Dark=White, Light=Black }" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                <Label Text="{Binding Reps}" FontSize="20" TextColor="{AppThemeBinding Dark=White, Light=Black }" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                <Label Text="{Binding Sets}" FontSize="20" TextColor="{AppThemeBinding Dark=White, Light=Black }" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                <Label Text="{Binding Weight}" FontSize="20" TextColor="{AppThemeBinding Dark=White, Light=Black }" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SportApp.Rejestracja" NavigationPage.HasNavigationBar="False">
+             x:Class="SportApp.Rejestracja" NavigationPage.HasNavigationBar="False"
+              BackgroundColor="{AppThemeBinding Dark=Black, Light=White }">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Label Text="Sign Up" FontSize="30" TextColor="Black" HorizontalOptions="Center" FontFamily="Metropolis" Margin="0,30,0,30"/>
-                <Label Text="Add your details to sign up" CharacterSpacing="1" FontSize="12" TextColor="Black" HorizontalOptions="Center" FontFamily="Metropolis" Margin="0,10,0,5"/>
+                <Label Text="Sign Up" FontSize="30" TextColor="{AppThemeBinding Dark=White, Light=Black }" HorizontalOptions="Center" FontFamily="Metropolis" Margin="0,30,0,30"/>
+                <Label Text="Add your details to sign up" CharacterSpacing="1" FontSize="12" TextColor="{AppThemeBinding Dark=White, Light=Black }" HorizontalOptions="Center" FontFamily="Metropolis" Margin="0,10,0,5"/>
                 <Grid Margin="20,0,20,0" >
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -61,7 +62,7 @@
                     </StackLayout>
 
                     <StackLayout Grid.Row="7">
-                        <Button Text="Sign Up" FontSize="16" FontFamily="Metropolis" CharacterSpacing="1" TextColor="White" BackgroundColor="#186049" CornerRadius="30" WidthRequest="200" HeightRequest="60" Margin="0,10,0,10" Clicked="Button_Clicked_Sign_Up"/>
+                        <Button Text="Sign Up" FontSize="16" FontFamily="Metropolis" CharacterSpacing="1" TextColor="{AppThemeBinding Dark=Black, Light=White }" BackgroundColor="{AppThemeBinding Dark=#b7cec7, Light=#186049 }" CornerRadius="30" WidthRequest="200" HeightRequest="60" Margin="0,10,0,10" Clicked="Button_Clicked_Sign_Up"/>
                     </StackLayout>
                 </Grid>
             </StackLayout>
