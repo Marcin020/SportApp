@@ -15,5 +15,16 @@ namespace SportApp
         {
             await Navigation.PushAsync(new Calc_BMI());
         }
+        void Handle_Toggled(object sender, Xamarin.Forms.ToggledEventArgs e)
+        {
+            if (e.Value)
+            {
+                App.Current.UserAppTheme = OSAppTheme.Dark;
+            }
+            else
+            {
+                App.Current.UserAppTheme = OSAppTheme.Light;
+            }
+        }
     }
 }
