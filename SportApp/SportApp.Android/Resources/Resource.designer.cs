@@ -16584,7 +16584,10 @@ namespace SportApp.Droid
 			public const int tooltip_frame_light = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int walk = 2131165346;
+			public const int trash = 2131165346;
+			
+			// aapt resource value: 0x7F0700A3
+			public const int walk = 2131165347;
 			
 			static Drawable()
 			{

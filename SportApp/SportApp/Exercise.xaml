@@ -3,26 +3,61 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SportApp.Exercise">
     <ContentPage.Content>
-        <RelativeLayout>
-            <Frame BorderColor="#247158"
+        <StackLayout>
+
+            <RelativeLayout>
+                <Frame BorderColor="#247158"
                     CornerRadius="60"
                     Padding="11"
                     RelativeLayout.XConstraint="50"
                     RelativeLayout.YConstraint="15"
                     RelativeLayout.WidthConstraint="300"
                     RelativeLayout.HeightConstraint="50">
-                <Label x:Name="trainingLabel" FontSize="25" CharacterSpacing="1" TextColor="Black" Margin="0,-3,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
-            </Frame>
+                    <Label x:Name="trainingLabel" FontSize="25" CharacterSpacing="1" TextColor="Black" Margin="0,-3,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                </Frame>
+                <Button  Text="SAVE"
+                          CornerRadius="50"
+                          FontSize="30"
+                          TextColor="White"
+                          BackgroundColor="#247158"
+                          RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-370}"
+                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-120}"
+                          RelativeLayout.WidthConstraint="100"
+                          RelativeLayout.HeightConstraint="100"
+                          Clicked="OnImageButtonClicked_Plus">
+                </Button>
 
-            <ImageButton Source="plus.png"
-                         BackgroundColor="White"
-                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-80}"
-                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-80}"
-                         RelativeLayout.WidthConstraint="50"
-                         RelativeLayout.HeightConstraint="50"
+                <Button  Text="ADD"
+                         CornerRadius="50"
+                         FontSize="30"
+                         TextColor="White"
+                         BackgroundColor="#247158"
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-120}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-120}"
+                         RelativeLayout.WidthConstraint="100"
+                         RelativeLayout.HeightConstraint="100"
                          Clicked="OnImageButtonClicked_Plus">
-            </ImageButton>
-        </RelativeLayout>
-        
+                </Button>
+            </RelativeLayout>
+            <ListView>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name}" FontSize="20" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                <Label Text="{Binding Reps}" FontSize="20" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                <Label Text="{Binding Sets}" FontSize="20" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                <Label Text="{Binding Weight}" FontSize="20" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+
+            </ListView>
+        </StackLayout>
+
+
     </ContentPage.Content>
 </ContentPage>

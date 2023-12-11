@@ -1,13 +1,17 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using Xamarin.Forms;
 
 namespace SportApp
 {
     public partial class Weight : ContentPage
     {
-        public Weight()
+        private string _exerciseName;
+        public Weight(string exerciseName)
         {
             InitializeComponent();
+            this._exerciseName = exerciseName;
+            exerciseLabel.Text = exerciseName;
         }
 
         private void PlusButtonClicked(object sender, EventArgs e)
@@ -56,5 +60,24 @@ namespace SportApp
                 entry.Text = (currentValue > 0) ? (currentValue - 1).ToString() : "0";
             }
         }
+
+        private void OnButtonClicked_Add(object sender, EventArgs e)
+        {
+            var series = seriesEntry.Text;
+            var repeat = repeatEntry.Text;
+            var weight = weightEntry.Text;
+            var exerciseName = exerciseLabel.Text;
+
+            var exerciseItem = new ExerciseItem
+            {
+                Name = exerciseName,
+                Reps = repeat,
+                Sets = series,
+                Weight = weight
+            };
+
+            (ListView.ItemsSource as ObservableCollection<ExerciseItem>)?.Add(exerciseItem);
+        }
+
     }
 }
