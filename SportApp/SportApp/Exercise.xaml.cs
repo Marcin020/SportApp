@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using SportApp.Base;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -28,19 +28,12 @@ namespace SportApp
             UpdateActivityLabel();
         }
 
-        public Exercise(string exerciseName, string series, string repeat, string weight) : this(exerciseName)
-        {
-            
-            Series = series;
-            Repeat = repeat;
-            Weight = weight;
-            ExerciseName = exerciseName;
-        }
-
+       
         private void UpdateActivityLabel()
         {
             trainingLabel.Text = selectedTraining;
         }
+
 
        private void OnImageButtonClicked_Plus(object sender, EventArgs e)
         {
@@ -48,9 +41,5 @@ namespace SportApp
             Navigation.PushAsync(new BaseExercise());
         }
 
-        private void OnImageButtonClicked_Delete(object sender, EventArgs e)
-        {
-            Navigation.PopAsync();
-        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,6 +13,8 @@ namespace SportApp
 
             InitializeComponent();
         }
+
+        public IEnumerable<object> ExerciseItem { get; internal set; }
 
         private void Button_Clicked_Login(object sender, EventArgs e)
         {
