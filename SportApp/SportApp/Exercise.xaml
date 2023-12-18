@@ -39,15 +39,23 @@
                          Clicked="OnImageButtonClicked_Plus">
                 </Button>
             </RelativeLayout>
-            <ListView>
+            <ListView x:Name="exerciseListView" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding Name}" FontSize="20" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
-                                <Label Text="{Binding Reps}" FontSize="20" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
-                                <Label Text="{Binding Sets}" FontSize="20" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
-                                <Label Text="{Binding Weight}" FontSize="20" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Name}" FontSize="20" FontAttributes="Bold" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Reps}" FontSize="10" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Start" HorizontalOptions="Start"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Sets}" FontSize="10" TextColor="Black" Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Weight}" FontSize="10" TextColor="Black" Margin="10,0,0,0" VerticalOptions="End" HorizontalOptions="End"></Label>
+                                </StackLayout>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

@@ -179,9 +179,7 @@ namespace SportApp
             {
 				myListView.ItemsSource = myList.Where(i => i.Name.ToLower().Contains(e.NewTextValue.ToLower()));
 
-                
             }
-            
         }
 
         private void OnItemTapped(object sender, ItemTappedEventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SportApp.Base;
+using System;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
 
@@ -63,20 +64,15 @@ namespace SportApp
 
         private void OnButtonClicked_Add(object sender, EventArgs e)
         {
-            var series = seriesEntry.Text;
-            var repeat = repeatEntry.Text;
-            var weight = weightEntry.Text;
-            var exerciseName = exerciseLabel.Text;
-
-            var exerciseItem = new ExerciseItem
+            ExerciseItem exerciseItem = new ExerciseItem
             {
-                Name = exerciseName,
-                Reps = repeat,
-                Sets = series,
-                Weight = weight
+               Weight = weightEntry.Text,
+               Series = seriesEntry.Text,
+               Repeat = repeatEntry.Text,
+               Name = exerciseLabel.Text
             };
 
-            (ListView.ItemsSource as ObservableCollection<ExerciseItem>)?.Add(exerciseItem);
+
         }
 
     }
