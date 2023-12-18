@@ -8,7 +8,7 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
              x:Class="SportApp.Menu"
-            BarBackgroundColor="#186049"
+            BarBackgroundColor="{AppThemeBinding Dark=#b7cec7, Light=#186049 }"
             SelectedTabColor="Black"
             UnselectedTabColor="#E4D5C7">
     

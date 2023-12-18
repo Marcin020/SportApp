@@ -71,9 +71,7 @@ namespace SportApp
                Repeat = repeatEntry.Text,
                Name = exerciseLabel.Text
             };
-
-
+           
         }
-
     }
 }

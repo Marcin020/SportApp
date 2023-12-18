@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SportApp.Home"
->
+             BackgroundColor="{AppThemeBinding Dark=Black, Light=White }">
 
     <ContentPage.Content>
         <ScrollView>
@@ -11,30 +11,30 @@
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Wybierz dyscyplinę sportu" TextColor="#247158" FontAttributes="Bold" CharacterSpacing="1"/>
+                            <Span Text="Wybierz dyscyplinę sportu" TextColor="{AppThemeBinding Dark=#6AB29B, Light=#247158 }" FontAttributes="Bold" CharacterSpacing="1"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
 
             <!-- Pierwszy wiersz z dwiema ikonkami -->
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                <ImageButton Clicked="Button_Cliked_Walk" Source="walk.png" WidthRequest="120" HeightRequest="120" BackgroundColor="#247158" CornerRadius="30" Padding="10" Margin="0,30,60,0"></ImageButton>
+                    <ImageButton Clicked="Button_Cliked_Walk" Source="walk.png" WidthRequest="120" HeightRequest="120" BackgroundColor="{AppThemeBinding Dark=#6AB29B, Light=#247158 }" CornerRadius="30" Padding="10" Margin="0,30,60,0"></ImageButton>
 
-                <ImageButton Clicked="Button_Cliked_Run" Source="run.png" WidthRequest="120" HeightRequest="120" BackgroundColor="#247158" CornerRadius="30" Padding="10" Margin="0,30,10,0"></ImageButton>
+                    <ImageButton Clicked="Button_Cliked_Run" Source="run.png" WidthRequest="120" HeightRequest="120" BackgroundColor="{AppThemeBinding Dark=#6AB29B, Light=#247158 }" CornerRadius="30" Padding="10" Margin="0,30,10,0"></ImageButton>
             </StackLayout>
 
             <!-- Drugi wiersz z dwiema ikonkami -->
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                <ImageButton Clicked="Button_Cliked_Bike" Source="bicyclist.png" WidthRequest="120" HeightRequest="120" BackgroundColor="#247158" CornerRadius="30" Padding="10" Margin="0,20,60,0"></ImageButton>
+                    <ImageButton Clicked="Button_Cliked_Bike" Source="bicyclist.png" WidthRequest="120" HeightRequest="120" BackgroundColor="{AppThemeBinding Dark=#6AB29B, Light=#247158 }" CornerRadius="30" Padding="10" Margin="0,20,60,0"></ImageButton>
 
-                <ImageButton Clicked="Button_Cliked_Gym" Source="gym.png" WidthRequest="120" HeightRequest="120" BackgroundColor="#247158" CornerRadius="30" Padding="10" Margin="0,20,10,0"></ImageButton>
+                    <ImageButton Clicked="Button_Cliked_Gym" Source="gym.png" WidthRequest="120" HeightRequest="120" BackgroundColor="{AppThemeBinding Dark=#6AB29B, Light=#247158 }" CornerRadius="30" Padding="10" Margin="0,20,10,0"></ImageButton>
             </StackLayout>
 
             <!-- Trzeci wiersz z dwiema ikonkami -->
             <StackLayout  Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                <ImageButton Clicked="Button_Cliked_Rolls" Source="rollerblade.png" WidthRequest="120" HeightRequest="120" BackgroundColor="#247158" CornerRadius="30" Padding="10" Margin="0,20,60,0"></ImageButton>
+                    <ImageButton Clicked="Button_Cliked_Rolls" Source="rollerblade.png" WidthRequest="120" HeightRequest="120" BackgroundColor="{AppThemeBinding Dark=#6AB29B, Light=#247158 }" CornerRadius="30" Padding="10" Margin="0,20,60,0"></ImageButton>
 
-                <ImageButton Clicked="Button_Cliked_Swim" Source="swimming.png" WidthRequest="120" HeightRequest="120" BackgroundColor="#247158" CornerRadius="30" Padding="10" Margin="0,20,10,0"></ImageButton>
+                    <ImageButton Clicked="Button_Cliked_Swim" Source="swimming.png" WidthRequest="120" HeightRequest="120" BackgroundColor="{AppThemeBinding Dark=#6AB29B, Light=#247158 }" CornerRadius="30" Padding="10" Margin="0,20,10,0"></ImageButton>
             </StackLayout>
         </StackLayout>
         </ScrollView>

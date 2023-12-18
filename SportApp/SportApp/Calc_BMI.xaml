@@ -1,16 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SportApp.Calc_BMI">
+             x:Class="SportApp.Calc_BMI"
+             BackgroundColor="{AppThemeBinding Dark=Black, Light=White }">
     <ContentPage.Resources>
         <Color x:Key="FunGreen">#186049</Color>
         <Color x:Key="Tradewind">#6AB29B</Color>
         <Color x:Key="Eden">#247158</Color>
         <Color x:Key="RichBlack">#00171F</Color>
+        <Color x:Key="Jungle">#b7cec7</Color>
+        
 
         <Style x:Key="LabelStyle" TargetType="Label">
             <Setter Property="HorizontalOptions" Value="Center" />
-            <Setter Property="TextColor" Value="{StaticResource RichBlack}" />
+            <Setter Property="TextColor" Value="{AppThemeBinding Dark=White, Light=RichBlack }" />
             <Setter Property="FontFamily" Value="Comfortaa" />
         </Style>
         <Style x:Key="TitleStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
@@ -18,12 +21,12 @@
         </Style>
         <Style x:Key="ValueStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
             <Setter Property="FontSize" Value="Title" />
-            <Setter Property="TextColor" Value="{StaticResource Eden}" />
+            <Setter Property="TextColor" Value="{AppThemeBinding Dark=Jungle, Light=Eden}" />
         </Style>
         <Style TargetType="Slider">
-            <Setter Property="ThumbColor" Value="{StaticResource FunGreen}"/>
-            <Setter Property="MinimumTrackColor" Value="{StaticResource FunGreen}"/>
-            <Setter Property="MaximumTrackColor" Value="{StaticResource Tradewind}" />
+            <Setter Property="ThumbColor" Value="{AppThemeBinding Dark=Tradewind, Light=FunGreen}"/>
+            <Setter Property="MinimumTrackColor" Value="{AppThemeBinding Dark=Tradewind, Light=FunGreen}"/>
+            <Setter Property="MaximumTrackColor" Value="{AppThemeBinding Dark=FunGreen, Light=Tradewind}" />
         </Style>
     </ContentPage.Resources>
     <FlexLayout Direction="Column" JustifyContent="SpaceEvenly" Padding="40">

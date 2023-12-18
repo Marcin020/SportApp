@@ -2,15 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SportApp.MainPage" 
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{AppThemeBinding Dark=Black, Light=White }">
 
     
         <StackLayout>
             <Image Source="aplikacja_logo.png" WidthRequest="350" Margin="0,50,0,100"/>
             <StackLayout>
                 <Button     Text="Login" 
-                            BackgroundColor="#186049" 
-                            TextColor="White" 
+                            BackgroundColor="{AppThemeBinding Dark=#b7cec7, Light=#186049 }" 
+                            TextColor="{AppThemeBinding Dark=Black, Light=White }" 
                             WidthRequest="310" 
                             HeightRequest="55" 
                             HorizontalOptions="Center" 
@@ -27,10 +28,10 @@
                             HeightRequest="55" 
                             HorizontalOptions="Center" 
                             CornerRadius="30"
-                            BorderColor="#186049"
+                            BorderColor="{AppThemeBinding Dark=#b7cec7, Light=#186049 }"
                             BorderWidth="1"
-                            TextColor="#186049"
-                            BackgroundColor="White"
+                            TextColor="{AppThemeBinding Dark=#b7cec7, Light=#186049 }"
+                            BackgroundColor="{AppThemeBinding Dark=Black, Light=White }"
                             CharacterSpacing="1.5"
                             Clicked="Button_Cliked_Rejestracja"
                             />

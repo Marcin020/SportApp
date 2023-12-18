@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SportApp.LoginUI" 
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{AppThemeBinding Dark=Black, Light=White }">
     <ContentPage.Content>
 
         <Grid RowDefinitions="*,*">
@@ -24,8 +25,8 @@
                 <Button VerticalOptions="Center" 
                     Margin="20,20,20,0" 
                     Text="Login" 
-                    TextColor="White" 
-                    BackgroundColor="#186049" 
+                    TextColor="{AppThemeBinding Dark=Black, Light=White }" 
+                    BackgroundColor="{AppThemeBinding Dark=#b7cec7, Light=#186049 }" 
                     CornerRadius="20" 
                     CharacterSpacing="1"
                     Clicked="Button_Clicked_Login">

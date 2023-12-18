@@ -6,32 +6,32 @@
              mc:Ignorable ="d"
              x:Class="SportApp.Trening"
              Title="Home"
-             BackgroundColor="White">
+              BackgroundColor="{AppThemeBinding Dark=Black, Light=White }">
 
     <StackLayout>
-        <Label x:Name="activityLabel" FontSize="40" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold">
+        <Label x:Name="activityLabel" FontSize="40" VerticalOptions="Center" HorizontalOptions="Center" TextColor="{AppThemeBinding Dark=White, Light=Black }" FontAttributes="Bold">
         </Label>
         
         
         <!-- Dystans -->
-        <Label x:Name="dystansLabel" Text="{Binding Dystans}" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="80"></Label>
-        <Label Text="km" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" TextColor="Black" Margin="10,0,10,15"></Label>
+        <Label x:Name="dystansLabel" Text="{Binding Dystans}" TextColor="{AppThemeBinding Dark=White, Light=Black }" HorizontalOptions="Center" VerticalOptions="Center" FontSize="80"></Label>
+        <Label Text="km" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" TextColor="{AppThemeBinding Dark=White, Light=Black }" Margin="10,0,10,15"></Label>
         
         <!-- Czas -->
 
-        <Label x:Name="timerLabel" Text="{Binding Duration}" TextColor="Black" FontSize="50" VerticalOptions="Center" HorizontalOptions="Center"></Label>
-        <Label Text="time" FontSize="20" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" Margin="10,0,10,15"/>
+        <Label x:Name="timerLabel" Text="{Binding Duration}" TextColor="{AppThemeBinding Dark=White, Light=Black }" FontSize="50" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+        <Label Text="time" FontSize="20" TextColor="{AppThemeBinding Dark=White, Light=Black }" VerticalOptions="Center" HorizontalOptions="Center" Margin="10,0,10,15"/>
         
         <!-- Kcal -->
 
-        <Label x:Name="kcalLabel" Text="{Binding Kcal}" FontSize="50" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center"></Label>
-        <Label Text="kcal" FontSize="20" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" Margin="10,0,10,100" />
+        <Label x:Name="kcalLabel" Text="{Binding Kcal}" FontSize="50" TextColor="{AppThemeBinding Dark=White, Light=Black }" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+        <Label Text="kcal" FontSize="20" TextColor="{AppThemeBinding Dark=White, Light=Black }" VerticalOptions="Center" HorizontalOptions="Center" Margin="10,0,10,100" />
         
         <!-- Przyciski -->
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-            <Button Text="Go" Command="{Binding StartTimerCommand}" Margin="5,0" BackgroundColor="Black" TextColor="White"  FontSize="20" FontAttributes="Bold" WidthRequest="100" HeightRequest="100" CornerRadius="50" HorizontalOptions="Center"/>
-            <Button Text="Stop" Command="{Binding StopTimerCommand}" Margin="5,0" BackgroundColor="Black" TextColor="White"  FontSize="20" FontAttributes="Bold" WidthRequest="100" HeightRequest="100" CornerRadius="50" HorizontalOptions="Center"/>
-            <Button Text="Pause" Command="{Binding PauseTimerCommand}" Margin="5,0" BackgroundColor="Black" TextColor="White"  FontSize="20" FontAttributes="Bold" WidthRequest="100" HeightRequest="100" CornerRadius="50" HorizontalOptions="Center"/>
+            <Button Text="Go" Command="{Binding StartTimerCommand}" Margin="5,0" BackgroundColor="{AppThemeBinding Dark=White, Light=Black }" TextColor="{AppThemeBinding Dark=Black, Light=White }"  FontSize="20" FontAttributes="Bold" WidthRequest="100" HeightRequest="100" CornerRadius="50" HorizontalOptions="Center"/>
+            <Button Text="Stop" Command="{Binding StopTimerCommand}" Margin="5,0" BackgroundColor="{AppThemeBinding Dark=White, Light=Black }" TextColor="{AppThemeBinding Dark=Black, Light=White }"  FontSize="20" FontAttributes="Bold" WidthRequest="100" HeightRequest="100" CornerRadius="50" HorizontalOptions="Center"/>
+            <Button Text="Pause" Command="{Binding PauseTimerCommand}" Margin="5,0" BackgroundColor="{AppThemeBinding Dark=White, Light=Black }" TextColor="{AppThemeBinding Dark=Black, Light=White }"  FontSize="20" FontAttributes="Bold" WidthRequest="100" HeightRequest="100" CornerRadius="50" HorizontalOptions="Center"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>

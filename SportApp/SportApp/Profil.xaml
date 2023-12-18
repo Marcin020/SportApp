@@ -2,11 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SportApp.Profil"
-             Title="Profil">
+             Title="Profil"
+             BackgroundColor="{AppThemeBinding Dark=Black, Light=White }">
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Kalkulator BMI" CornerRadius="40" Margin="10,50,10,0" CharacterSpacing="1" BackgroundColor="#186049" TextColor="#B6B7B7" Clicked="Button_Cliked_BMI" ></Button>
-            <Button Text="Tryb"  CornerRadius="40" Margin="10,20,10,0" CharacterSpacing="1" BackgroundColor="#186049" TextColor="#B6B7B7" ></Button>
+            <ImageButton Source="bmi.png" CornerRadius="40" Margin="10,50,10,0" WidthRequest="200" BackgroundColor="{AppThemeBinding Dark=#b7cec7, Light=#186049 }" Clicked="Button_Cliked_BMI" >
+            </ImageButton>
+
+            <Label Text="Tryb jasny/ciemny" HorizontalOptions="Center" FontSize="20" Margin="10,20,10,20" TextColor="{AppThemeBinding Dark=White, Light=Black }"/>
+            <Switch Toggled="Handle_Toggled" HorizontalOptions="Center" OnColor="{AppThemeBinding Dark=White, Light=Black }" ThumbColor="{AppThemeBinding Dark=Green, Light=Black }"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
