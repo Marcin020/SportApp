@@ -4,58 +4,84 @@
              x:Class="SportApp.Exercise"
              BackgroundColor="{AppThemeBinding Dark=Black, Light=White }">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="10">
+            <Label x:Name="Date"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   VerticalTextAlignment="Center"
+                   TextColor="{AppThemeBinding Dark=White, Light=Black }"
+                   Padding="20"/>
+            
+            <Entry x:Name="ExerciseName"
+                Placeholder="Enter exercise"
+                Margin="0,0,0,10"/>
+            
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="ExerciseWeight"
+                        Placeholder="kg"
+                        Margin="0,0,0,20"
+                        WidthRequest="65"
+                        HorizontalOptions="Start"
+                        Keyboard="Numeric"/>
+                <Entry x:Name="ExerciseReps"
+                        Placeholder="reps"
+                        Margin="70,0,0,20"
+                        WidthRequest="65"
+                        HorizontalOptions="Center"
+                        Keyboard="Numeric"/>
+                <Entry x:Name="ExerciseSets"
+                        Placeholder="sets"
+                        Margin="70,0,0,20"
+                        WidthRequest="65"
+                        HorizontalOptions="End"
+                        Keyboard="Numeric"/>
+            </StackLayout>
 
-            <RelativeLayout>
-                <Frame BorderColor="{AppThemeBinding Dark=#6AB29B, Light=#247158 }"
-                    CornerRadius="60"
-                    Padding="11"
-                    RelativeLayout.XConstraint="50"
-                    RelativeLayout.YConstraint="15"
-                    RelativeLayout.WidthConstraint="300"
-                    RelativeLayout.HeightConstraint="50">
-                    <Label x:Name="trainingLabel" FontSize="25" CharacterSpacing="1" TextColor="{AppThemeBinding Dark=White, Light=Black }" Margin="0,-3,0,0" VerticalOptions="Center" HorizontalOptions="Center"></Label>
-                </Frame>
-                <Button  Text="SAVE"
-                          CornerRadius="50"
-                          FontSize="30"
-                          TextColor="{AppThemeBinding Dark=Black, Light=White }"
-                          BackgroundColor="{AppThemeBinding Dark=#6AB29B, Light=#247158 }"
-                          RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-370}"
-                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-120}"
-                          RelativeLayout.WidthConstraint="100"
-                          RelativeLayout.HeightConstraint="100"
-                          Clicked="OnImageButtonClicked_Plus">
-                </Button>
-
-                <Button  Text="ADD"
-                         CornerRadius="50"
-                         FontSize="30"
-                         TextColor="{AppThemeBinding Dark=Black, Light=White }"
-                         BackgroundColor="{AppThemeBinding Dark=#6AB29B, Light=#247158 }"
-                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-120}"
-                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-120}"
-                         RelativeLayout.WidthConstraint="100"
-                         RelativeLayout.HeightConstraint="100"
-                         Clicked="OnImageButtonClicked_Plus">
-                </Button>
-            </RelativeLayout>
-            <ListView x:Name="exerciseListView" HasUnevenRows="True">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                                <Label Text="{Binding Name}" FontSize="20" FontAttributes="Bold" TextColor="Black" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
-                                <Label Text="{Binding Reps}" FontSize="10" TextColor="Black" VerticalOptions="Start" HorizontalOptions="Start" />
-                                <Label Text="{Binding Sets}" FontSize="10" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Start" />
-                                <Label Text="{Binding Weight}" FontSize="10" TextColor="Black" VerticalOptions="End" HorizontalOptions="End" />
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="AddExercise"
+                    Text="Add"
+                    Clicked="AddExercise_Clicked"
+                    BorderWidth="50" HorizontalOptions="Start"
+                    BackgroundColor="{AppThemeBinding Dark=White, Light=Black }"
+                    TextColor="{AppThemeBinding Dark=Black, Light=White }"/>
+            <Button x:Name="DeleteExercise"
+                    Text="Delete"
+                    Clicked="DeleteExercise_Clicked"
+                    BorderWidth="50" 
+                    Margin="180,0,0,0"
+                    BackgroundColor="{AppThemeBinding Dark=White, Light=Black }"
+                    TextColor="{AppThemeBinding Dark=Black, Light=White }"/>
+            </StackLayout>
+            
+            <Frame BorderColor="gray"
+                   Margin="10">
+                <ListView x:Name="ExerciseListView"
+                          ItemsSource="{Binding exerciseList}"
+                          VerticalOptions="FillAndExpand">
+                    <ListView.ItemTemplate>
+                        <DataTemplate >
+                            <ViewCell>
+                                <StackLayout Padding="5">
+                                    <ScrollView>
+                                        <Label Text="{Binding}" 
+                                               FontSize="16" 
+                                               TextColor="Black" 
+                                               VerticalOptions="Center"/>
+                                    </ScrollView>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Frame>
+            <Button x:Name="SaveExercise"
+                    Text="Save"
+                    Clicked="SaveButton_Clicked"
+                    BorderWidth="50" 
+                    Margin="0,20,0,0"
+                    BackgroundColor="{AppThemeBinding Dark=White, Light=Black }"
+                    TextColor="{AppThemeBinding Dark=Black, Light=White }"/>
         </StackLayout>
-
-
+        
     </ContentPage.Content>
 </ContentPage>

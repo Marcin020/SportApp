@@ -5,9 +5,28 @@
              BackgroundColor="{AppThemeBinding Dark=Black, Light=White }">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Frame BorderColor="gray"
+                   Margin="10">
+                <ListView x:Name="DziennikList"
+                          ItemsSource="{Binding dziennikList}"
+                          VerticalOptions="FillAndExpand" ItemTapped="DziennikList_ItemTapped">
+                    <ListView.ItemTemplate >
+                        <DataTemplate >
+                            <ViewCell>
+                                <StackLayout Padding="5" >
+                                    <ScrollView>
+                                        <Label Text="{Binding}" 
+                                               FontSize="16" 
+                                               TextColor="Black" 
+                                               VerticalOptions="Center"/>
+                                    </ScrollView>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+

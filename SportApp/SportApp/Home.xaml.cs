@@ -34,7 +34,7 @@ namespace SportApp
         }
         private void Button_Cliked_Gym(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Wybor());
+            Navigation.PushAsync(new Exercise());
         }
         private void Button_Cliked_Rolls(object sender, EventArgs e)
         {

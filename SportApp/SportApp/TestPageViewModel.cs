@@ -93,6 +93,7 @@ namespace SportApp
 
                 ResetTimer();
                 ResetKcal();
+
             }
             else
             {
