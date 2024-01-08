@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using Xamarin.Forms;
+using SportApp.Base;
 
 namespace SportApp
 {
@@ -88,12 +89,24 @@ namespace SportApp
         {
             _isRunning = false;
             bool shouldStop = await Application.Current.MainPage.DisplayAlert("Finish workout", "Are you sure?", "Yes", "No");
+
             if (shouldStop)
             {
+                var newEntry = new TrainingEntry
+                {
+                    Date = DateTime.Now.ToString("dd-MM-yyyy"),
+                    DayOfWeek = DateTime.Now.DayOfWeek.ToString(),
+                    ActivityName = SelectedActivity,
+                    Duration = Duration,
+                    Kcal = Kcal,
+                };
+
+                App.TrainingEntries.Add(newEntry);
 
                 ResetTimer();
                 ResetKcal();
 
+                await Application.Current.MainPage.Navigation.PushAsync(new Dziennik());
             }
             else
             {

@@ -32,8 +32,8 @@ namespace SportApp
 
             if (!string.IsNullOrEmpty(ExerciseName.Text))
             {
-                exerciseList.Add(exerciseDetails);  // Dodawanie informacji o ćwiczeniu do listy
-                ClearFields();  // Czyszczenie pól wprowadzania po dodaniu ćwiczenia
+                exerciseList.Add(exerciseDetails);
+                ClearFields();  
             }
         }
 
@@ -61,11 +61,22 @@ namespace SportApp
             }
         }
 
-        private void SaveButton_Clicked(object sender, EventArgs e)
+        private async void SaveButton_Clicked(object sender, EventArgs e)
         {
-            string currentDate = DateTime.Now.ToString("dd-MM-yyyy");
-            App.TrainingEntries.Add(new TrainingEntry { Date = currentDate, ActivityName = "GYM" });
-            Navigation.PushAsync(new Dziennik());
+            var newEntry = new TrainingEntry
+            {
+                Date = DateTime.Now.ToString("dd.MM.yyyy"),
+                DayOfWeek = DateTime.Now.DayOfWeek.ToString(),
+                ActivityName = "GYM",
+                Duration = "0",
+                Distance = 0,
+                Kcal = 0,
+                ExerciseItems = new List<TrainingExercise>()
+                
+            };
+
+            App.TrainingEntries.Add(newEntry);
+            await Application.Current.MainPage.Navigation.PushAsync(new Dziennik());
         }
 
     }

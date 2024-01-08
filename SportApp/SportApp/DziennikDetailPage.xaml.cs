@@ -18,12 +18,8 @@ namespace SportApp
         {
             InitializeComponent();
             SelectedTrainingEntry = entry;
-            LoadExercises();
+            //LoadExercises();
         }
 
-        private void LoadExercises()
-        {
-            ExerciseListView.ItemsSource = SelectedTrainingEntry.Exercises;
-        }
     }
 }
