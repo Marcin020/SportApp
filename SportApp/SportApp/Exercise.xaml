@@ -14,7 +14,10 @@
             
             <Entry x:Name="ExerciseName"
                 Placeholder="Enter exercise"
-                Margin="0,0,0,10"/>
+                Margin="0,0,0,10"
+                PlaceholderColor="{AppThemeBinding Dark=White, Light=Black }"
+                TextColor="{AppThemeBinding Dark=White, Light=Black }"
+                />
             
             <StackLayout Orientation="Horizontal">
                 <Entry x:Name="ExerciseWeight"
@@ -22,19 +25,25 @@
                         Margin="0,0,0,20"
                         WidthRequest="65"
                         HorizontalOptions="Start"
-                        Keyboard="Numeric"/>
+                        Keyboard="Numeric"
+                        PlaceholderColor="{AppThemeBinding Dark=White, Light=Black }"
+                        TextColor="{AppThemeBinding Dark=White, Light=Black }"/>
                 <Entry x:Name="ExerciseReps"
                         Placeholder="reps"
                         Margin="70,0,0,20"
                         WidthRequest="65"
                         HorizontalOptions="Center"
-                        Keyboard="Numeric"/>
+                        Keyboard="Numeric"
+                        PlaceholderColor="{AppThemeBinding Dark=White, Light=Black }"
+                        TextColor="{AppThemeBinding Dark=White, Light=Black }"/>
                 <Entry x:Name="ExerciseSets"
                         Placeholder="sets"
                         Margin="70,0,0,20"
                         WidthRequest="65"
                         HorizontalOptions="End"
-                        Keyboard="Numeric"/>
+                        Keyboard="Numeric"
+                        PlaceholderColor="{AppThemeBinding Dark=White, Light=Black }"
+                        TextColor="{AppThemeBinding Dark=White, Light=Black }"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
@@ -42,18 +51,18 @@
                     Text="Add"
                     Clicked="AddExercise_Clicked"
                     BorderWidth="50" HorizontalOptions="Start"
-                    BackgroundColor="{AppThemeBinding Dark=White, Light=Black }"
+                    BackgroundColor="{AppThemeBinding Dark=#66CDAA, Light=#186049 }"
                     TextColor="{AppThemeBinding Dark=Black, Light=White }"/>
             <Button x:Name="DeleteExercise"
                     Text="Delete"
                     Clicked="DeleteExercise_Clicked"
                     BorderWidth="50" 
                     Margin="180,0,0,0"
-                    BackgroundColor="{AppThemeBinding Dark=White, Light=Black }"
+                    BackgroundColor="{AppThemeBinding Dark=#66CDAA, Light=#186049 }"
                     TextColor="{AppThemeBinding Dark=Black, Light=White }"/>
             </StackLayout>
-            
-            <Frame BorderColor="gray"
+
+            <Frame BorderColor="{AppThemeBinding Dark=#66CDAA, Light=#186049 }"
                    Margin="10">
                 <ListView x:Name="ExerciseListView"
                           ItemsSource="{Binding exerciseList}"
@@ -79,7 +88,7 @@
                     Clicked="SaveButton_Clicked"
                     BorderWidth="50" 
                     Margin="0,20,0,0"
-                    BackgroundColor="{AppThemeBinding Dark=White, Light=Black }"
+                    BackgroundColor="{AppThemeBinding Dark=#66CDAA, Light=#186049 }"
                     TextColor="{AppThemeBinding Dark=Black, Light=White }"/>
         </StackLayout>
         

@@ -5,11 +5,12 @@
              BackgroundColor="{AppThemeBinding Dark=Black, Light=White }">
     <ContentPage.Content>
         <StackLayout>
-            <Frame BorderColor="gray"
+            <Frame BorderColor="{AppThemeBinding Dark=#66CDAA, Light=#186049 }"
                    Margin="10">
                 <ListView x:Name="DziennikList"
                           ItemsSource="{Binding dziennikList}"
-                          VerticalOptions="FillAndExpand" ItemTapped="DziennikList_ItemTapped">
+                          VerticalOptions="FillAndExpand" ItemTapped="DziennikList_ItemTapped"
+                          >
                     <ListView.ItemTemplate >
                         <DataTemplate >
                             <ViewCell>
@@ -18,7 +19,8 @@
                                         <Label Text="{Binding}" 
                                                FontSize="16" 
                                                TextColor="Black" 
-                                               VerticalOptions="Center"/>
+                                               VerticalOptions="Center"
+                                               />
                                     </ScrollView>
                                 </StackLayout>
                             </ViewCell>

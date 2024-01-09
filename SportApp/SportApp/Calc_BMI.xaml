@@ -13,7 +13,7 @@
 
         <Style x:Key="LabelStyle" TargetType="Label">
             <Setter Property="HorizontalOptions" Value="Center" />
-            <Setter Property="TextColor" Value="{AppThemeBinding Dark=White, Light=RichBlack }" />
+            <Setter Property="TextColor" Value="{AppThemeBinding Dark=White, Light=Black }" />
             <Setter Property="FontFamily" Value="Comfortaa" />
         </Style>
         <Style x:Key="TitleStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
@@ -21,12 +21,12 @@
         </Style>
         <Style x:Key="ValueStyle" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
             <Setter Property="FontSize" Value="Title" />
-            <Setter Property="TextColor" Value="{AppThemeBinding Dark=Jungle, Light=Eden}" />
+            <Setter Property="TextColor" Value="{AppThemeBinding Dark=#b7cec7, Light=#247158}" />
         </Style>
         <Style TargetType="Slider">
-            <Setter Property="ThumbColor" Value="{AppThemeBinding Dark=Tradewind, Light=FunGreen}"/>
-            <Setter Property="MinimumTrackColor" Value="{AppThemeBinding Dark=Tradewind, Light=FunGreen}"/>
-            <Setter Property="MaximumTrackColor" Value="{AppThemeBinding Dark=FunGreen, Light=Tradewind}" />
+            <Setter Property="ThumbColor" Value="{AppThemeBinding Dark=#66CDAA, Light=#186049 }"/>
+            <Setter Property="MinimumTrackColor" Value="{AppThemeBinding Dark=#66CDAA, Light=#186049 }"/>
+            <Setter Property="MaximumTrackColor" Value="{AppThemeBinding Dark=#186049, Light=#66CDAA}" />
         </Style>
     </ContentPage.Resources>
     <FlexLayout Direction="Column" JustifyContent="SpaceEvenly" Padding="40">

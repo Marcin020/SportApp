@@ -23,7 +23,7 @@ namespace SportApp
 
             if (myquery != null)
             {
-                App.Current.MainPage = new NavigationPage(new Home());
+                App.Current.MainPage = new NavigationPage(new Menu());
             }
             else
             {

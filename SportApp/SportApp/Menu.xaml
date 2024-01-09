@@ -8,9 +8,9 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
              x:Class="SportApp.Menu"
-            BarBackgroundColor="{AppThemeBinding Dark=#b7cec7, Light=#186049 }"
+            BarBackgroundColor="{AppThemeBinding Dark=#66CDAA, Light=#186049 }"
             SelectedTabColor="Black"
-            UnselectedTabColor="#E4D5C7">
+            UnselectedTabColor="{AppThemeBinding Dark=#816d5a, Light=#E4D5C7 }">
     
     <local:Home Title="Home" IconImageSource="menu.png"></local:Home>
     <sportapp:Dziennik  Title="Dziennik" IconImageSource="plan.png"></sportapp:Dziennik>

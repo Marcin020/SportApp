@@ -108,7 +108,7 @@
                     Light={StaticResource CardBackground}}"/>
             </Style>
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="#247158" />
+                <Setter Property="BarBackgroundColor" Value="{AppThemeBinding Dark=#66CDAA, Light=#186049 }" />
                 <!-- Ustaw kolor tła paska nawigacyjnego -->
                 <Setter Property="BarTextColor" Value="Black" />
                 <!-- Ustaw kolor tekstu na pasku nawigacyjnym -->

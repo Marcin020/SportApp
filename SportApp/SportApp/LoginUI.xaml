@@ -9,15 +9,15 @@
         <Grid RowDefinitions="*,*">
             <StackLayout HorizontalOptions="Center">
 
-                <Label Text="Login" FontSize="40" HorizontalTextAlignment="Center" FontFamily="Netropolis" TextColor="black" Margin="0,50,0,0"/>
+                <Label Text="Login" FontSize="40" HorizontalTextAlignment="Center" FontFamily="Netropolis" TextColor="{AppThemeBinding Dark=White, Light=Black }" Margin="0,50,0,0"/>
 
-                <Label Text="Add your details to login" CharacterSpacing="1" HorizontalTextAlignment="Center" FontSize="15" FontFamily="Metropolis" Margin="0,20,0,10"/>
-                <Frame CornerRadius="30" Margin="0,20,0,0" WidthRequest="330" HeightRequest="50"  HasShadow="False" Background="#F2F2F2" >
-                    <Entry x:Name="EntryUser" FontSize="14" Placeholder="Username" PlaceholderColor="#B6B7B7" TextColor="black" Margin="15,-30,0,-30" />
+                <Label Text="Add your details to login" TextColor="{AppThemeBinding Dark=White, Light=Black }" CharacterSpacing="1" HorizontalTextAlignment="Center" FontSize="15" FontFamily="Metropolis" Margin="0,20,0,10"/>
+                <Frame CornerRadius="30" Margin="0,20,0,0" WidthRequest="330" HeightRequest="50"  HasShadow="False" Background="{AppThemeBinding Dark=#dbd6ce, Light=#F1F3F3 }" >
+                    <Entry x:Name="EntryUser" FontSize="14" Placeholder="Username" PlaceholderColor="Black" TextColor="black" Margin="15,-30,0,-30" />
                 </Frame>
 
-                <Frame CornerRadius="30" Margin="0,20,0,0" WidthRequest="330" HeightRequest="50"  HasShadow="False" Background="#F2F2F2"  >
-                    <Entry x:Name="EntryPassword" IsPassword="True" FontSize="14"  Placeholder="Password" PlaceholderColor="#B6B7B7" TextColor="black" Margin="15,-30,0,-30"/>
+                <Frame CornerRadius="30" Margin="0,20,0,0" WidthRequest="330" HeightRequest="50"  HasShadow="False" Background="{AppThemeBinding Dark=#dbd6ce, Light=#F1F3F3 }"  >
+                    <Entry x:Name="EntryPassword" IsPassword="True" FontSize="14"  Placeholder="Password" PlaceholderColor="Black" TextColor="black" Margin="15,-30,0,-30"/>
                 </Frame>
 
             </StackLayout>
@@ -26,7 +26,7 @@
                     Margin="20,20,20,0" 
                     Text="Login" 
                     TextColor="{AppThemeBinding Dark=Black, Light=White }" 
-                    BackgroundColor="{AppThemeBinding Dark=#b7cec7, Light=#186049 }" 
+                    BackgroundColor="{AppThemeBinding Dark=#66CDAA, Light=#186049 }" 
                     CornerRadius="20" 
                     CharacterSpacing="1"
                     Clicked="Button_Clicked_Login">

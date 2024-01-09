@@ -10,7 +10,7 @@
             <Image Source="aplikacja_logo.png" WidthRequest="350" Margin="0,50,0,100"/>
             <StackLayout>
                 <Button     Text="Login" 
-                            BackgroundColor="{AppThemeBinding Dark=#b7cec7, Light=#186049 }" 
+                            BackgroundColor="{AppThemeBinding Dark=#66CDAA, Light=#186049 }" 
                             TextColor="{AppThemeBinding Dark=Black, Light=White }" 
                             WidthRequest="310" 
                             HeightRequest="55" 
@@ -28,9 +28,9 @@
                             HeightRequest="55" 
                             HorizontalOptions="Center" 
                             CornerRadius="30"
-                            BorderColor="{AppThemeBinding Dark=#b7cec7, Light=#186049 }"
+                            BorderColor="{AppThemeBinding Dark=#66CDAA, Light=#186049 }"
                             BorderWidth="1"
-                            TextColor="{AppThemeBinding Dark=#b7cec7, Light=#186049 }"
+                            TextColor="{AppThemeBinding Dark=#66CDAA, Light=#186049 }"
                             BackgroundColor="{AppThemeBinding Dark=Black, Light=White }"
                             CharacterSpacing="1.5"
                             Clicked="Button_Cliked_Rejestracja"

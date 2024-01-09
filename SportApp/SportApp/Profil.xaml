@@ -6,11 +6,11 @@
              BackgroundColor="{AppThemeBinding Dark=Black, Light=White }">
     <ContentPage.Content>
         <StackLayout>
-            <ImageButton Source="bmi.png" CornerRadius="40" Margin="10,50,10,0" WidthRequest="200" BackgroundColor="{AppThemeBinding Dark=#b7cec7, Light=#186049 }" Clicked="Button_Cliked_BMI" >
+            <ImageButton Source="bmi.png" CornerRadius="40" Margin="10,50,10,0" WidthRequest="200" BackgroundColor="{AppThemeBinding Dark=#66CDAA, Light=#186049 }" Clicked="Button_Cliked_BMI" >
             </ImageButton>
 
             <Label Text="Tryb jasny/ciemny" HorizontalOptions="Center" FontSize="20" Margin="10,20,10,20" TextColor="{AppThemeBinding Dark=White, Light=Black }"/>
-            <Switch Toggled="Handle_Toggled" HorizontalOptions="Center" OnColor="{AppThemeBinding Dark=White, Light=Black }" ThumbColor="{AppThemeBinding Dark=Green, Light=Black }"/>
+            <Switch Toggled="Handle_Toggled" HorizontalOptions="Center" OnColor="{AppThemeBinding Dark=#dbd6ce, Light=#464646 }" ThumbColor="{AppThemeBinding Dark=#66CDAA, Light=#186049 }"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
