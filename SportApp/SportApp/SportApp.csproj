@@ -24,8 +24,8 @@
     <Compile Update="Profil.xaml.cs">
       <DependentUpon>Profil.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Trening.xaml.cs">
-      <DependentUpon>Trening.xaml</DependentUpon>
+    <Compile Update="Dziennik.xaml.cs">
+      <DependentUpon>Dziennik.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 

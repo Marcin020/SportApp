@@ -1,63 +1,64 @@
-﻿using System;
+﻿using SportApp.Base;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SportApp.Base;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
 
 namespace SportApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Exercise : ContentPage
     {
-        private ObservableCollection<string> exerciseList = new ObservableCollection<string>();
+        private readonly ObservableCollection<string> exerciseList = new ObservableCollection<string>();
+        private string selectedExercise;
 
         public Exercise()
         {
             InitializeComponent();
+            InitializeDate();
+            ExerciseListView.ItemsSource = exerciseList;
+        }
+
+        private void InitializeDate()
+        {
             DateTime currentDate = DateTime.Now;
             Date.Text = $"{currentDate.ToString("dd-MM-yyyy")}\n{currentDate.ToString("dddd")}";
-            ExerciseListView.ItemsSource = exerciseList;
         }
 
         private void AddExercise_Clicked(object sender, EventArgs e)
         {
             string exerciseDetails = $"{ExerciseName.Text.ToUpper()}\n kg: {ExerciseWeight.Text}, reps: {ExerciseReps.Text}, series: {ExerciseSets.Text}";
-
-
             if (!string.IsNullOrEmpty(ExerciseName.Text))
             {
                 exerciseList.Add(exerciseDetails);
-                ClearFields();  
+                ClearFields();
             }
         }
 
         private void ClearFields()
         {
-            ExerciseName.Text = string.Empty;
-            ExerciseSets.Text = string.Empty;
-            ExerciseReps.Text = string.Empty;
-            ExerciseWeight.Text = string.Empty;
+            ExerciseName.Text = ExerciseSets.Text = ExerciseReps.Text = ExerciseWeight.Text = string.Empty;
         }
 
-        private void DeleteExercise_Clicked(object sender, EventArgs e)
+        private void ExerciseListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (ExerciseListView.SelectedItem != null)
+            if (e.SelectedItem != null)
             {
-                string selectedExercise = ExerciseListView.SelectedItem.ToString();
+                selectedExercise = e.SelectedItem.ToString();
+            }
+        }
 
+        private async void DeleteExercise_Clicked(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(selectedExercise) && exerciseList.Contains(selectedExercise))
+            {
                 exerciseList.Remove(selectedExercise);
-
-                ExerciseListView.SelectedItem = null;
+                selectedExercise = null; 
             }
             else
             {
-                DisplayAlert("Attention", "No exercise selected", "OK");
+                await DisplayAlert("Attention", "No exercise selected", "OK");
             }
         }
 
@@ -72,12 +73,10 @@ namespace SportApp
                 Distance = 0,
                 Kcal = 0,
                 ExerciseItems = new List<TrainingExercise>()
-                
             };
 
             App.TrainingEntries.Add(newEntry);
             await Application.Current.MainPage.Navigation.PushAsync(new Dziennik());
         }
-
     }
 }

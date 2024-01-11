@@ -6,14 +6,16 @@
     <ContentPage.Content>
         <StackLayout Padding="10">
             <Label x:Name="Date"
-                   FontSize="20"
+                   FontSize="30"
                    HorizontalOptions="Center"
                    VerticalTextAlignment="Center"
                    TextColor="{AppThemeBinding Dark=White, Light=Black }"
-                   Padding="20"/>
+                   Padding="10"/>
             
             <Entry x:Name="ExerciseName"
                 Placeholder="Enter exercise"
+                   HorizontalTextAlignment="Center"
+                 
                 Margin="0,0,0,10"
                 PlaceholderColor="{AppThemeBinding Dark=White, Light=Black }"
                 TextColor="{AppThemeBinding Dark=White, Light=Black }"
@@ -52,36 +54,55 @@
                     Clicked="AddExercise_Clicked"
                     BorderWidth="50" HorizontalOptions="Start"
                     BackgroundColor="{AppThemeBinding Dark=#66CDAA, Light=#186049 }"
-                    TextColor="{AppThemeBinding Dark=Black, Light=White }"/>
+                    TextColor="{AppThemeBinding Dark=Black, Light=White }"
+                    CornerRadius="100"
+                    HeightRequest="90"
+                    WidthRequest="90"/>
             <Button x:Name="DeleteExercise"
                     Text="Delete"
                     Clicked="DeleteExercise_Clicked"
                     BorderWidth="50" 
                     Margin="180,0,0,0"
                     BackgroundColor="{AppThemeBinding Dark=#66CDAA, Light=#186049 }"
-                    TextColor="{AppThemeBinding Dark=Black, Light=White }"/>
+                    TextColor="{AppThemeBinding Dark=Black, Light=White }"
+                     CornerRadius="100"
+                     HeightRequest="90"
+                     WidthRequest="90"/>
             </StackLayout>
 
             <Frame BorderColor="{AppThemeBinding Dark=#66CDAA, Light=#186049 }"
                    Margin="10">
                 <ListView x:Name="ExerciseListView"
                           ItemsSource="{Binding exerciseList}"
-                          VerticalOptions="FillAndExpand">
+                          VerticalOptions="FillAndExpand"
+                          ItemSelected="ExerciseListView_ItemSelected">
                     <ListView.ItemTemplate>
-                        <DataTemplate >
+                        <DataTemplate>
                             <ViewCell>
                                 <StackLayout Padding="5">
                                     <ScrollView>
                                         <Label Text="{Binding}" 
-                                               FontSize="16" 
-                                               TextColor="Black" 
-                                               VerticalOptions="Center"/>
+                               FontSize="16" 
+                               TextColor="Black" 
+                               VerticalOptions="Center">
+                                            <VisualStateManager.VisualStateGroups>
+                                                <VisualStateGroup Name="CommonStates">
+                                                    <VisualState Name="Normal" />
+                                                    <VisualState Name="Selected">
+                                                        <VisualState.Setters>
+                                                            <Setter Property="BackgroundColor" Value="Orange" />
+                                                        </VisualState.Setters>
+                                                    </VisualState>
+                                                </VisualStateGroup>
+                                            </VisualStateManager.VisualStateGroups>
+                                        </Label>
                                     </ScrollView>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+
             </Frame>
             <Button x:Name="SaveExercise"
                     Text="Save"

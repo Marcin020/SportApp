@@ -12,7 +12,7 @@ namespace SportApp
             Device.SetFlags(new string[] { "AppTheme_Experimental" });
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Start());
+            MainPage = new NavigationPage(new Exercise());
         }
 
         protected override void OnStart()
