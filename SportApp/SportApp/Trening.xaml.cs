@@ -33,7 +33,32 @@ namespace SportApp
             activityLabel.Text = selectedActivity;
         }
 
-  
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            // Rozpocznij nasłuchiwanie zmian w prędkości i dystansie po pojawieniu się strony
+            MessagingCenter.Subscribe<TestPageViewModel, double>(this, "SpeedUpdated", (sender, speed) =>
+            {
+                _viewModel.Speed = speed;
+            });
+
+            MessagingCenter.Subscribe<TestPageViewModel, double>(this, "DistanceUpdated", (sender, distance) =>
+            {
+                _viewModel.Distance = distance;
+            });
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+            // Zatrzymaj nasłuchiwanie po zniknięciu strony
+            MessagingCenter.Unsubscribe<TestPageViewModel, double>(this, "SpeedUpdated");
+            MessagingCenter.Unsubscribe<TestPageViewModel, double>(this, "DistanceUpdated");
+        }
+
+
 
         public ICommand StartTimerCommand { get; set; }
 
