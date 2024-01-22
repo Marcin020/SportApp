@@ -86,7 +86,7 @@ namespace SportApp
         private void OnStartTimerExecute(object obj)
         {
             _isRunning = true;
-            Device.StartTimer(TimeSpan.FromSeconds(1), () =>
+            Device.StartTimer(interval: TimeSpan.FromSeconds(1), () =>
             {
                 if (_isRunning)
                 {
@@ -111,10 +111,10 @@ namespace SportApp
             });
         }
 
-        private void OnStopTimerExecute(object obj)
+        private async void OnStopTimerExecute(object obj)
         {
             _isRunning = false;
-            bool shouldStop = Application.Current.MainPage.DisplayAlert("Finish workout", "Are you sure?", "Yes", "No").Result;
+            bool shouldStop = await Application.Current.MainPage.DisplayAlert("Finish workout", "Are you sure?", "Yes", "No");
 
             if (shouldStop)
             {
@@ -125,6 +125,7 @@ namespace SportApp
                     ActivityName = SelectedActivity,
                     Duration = Duration,
                     Kcal = Kcal,
+                    Distance = Distance
                 };
 
                 App.TrainingEntries.Add(newEntry);
@@ -133,7 +134,7 @@ namespace SportApp
                 ResetKcal();
                 ResetDistance();
 
-                Application.Current.MainPage.Navigation.PushAsync(new Dziennik()).Wait();
+                await Application.Current.MainPage.Navigation.PushAsync(new Dziennik());
             }
             else
             {

@@ -17,8 +17,6 @@
         <Label x:Name="dystansLabel" Text="{Binding Distance, StringFormat='{0:F2} km'}" TextColor="{AppThemeBinding Dark=White, Light=Black }" HorizontalOptions="Center" VerticalOptions="Center" FontSize="80"></Label>
         <Label Text="km" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" TextColor="{AppThemeBinding Dark=White, Light=Black }" Margin="10,0,10,15"></Label>
         
-        <!--Prędkość-->
-        <Label x:Name="speedLabel" Text="{Binding Speed, StringFormat='{0:F2} m/s'}" TextColor="{AppThemeBinding Dark=White, Light=Black }" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"></Label>
         
         <!-- Czas -->
 

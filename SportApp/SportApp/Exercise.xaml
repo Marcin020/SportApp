@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SportApp.Exercise"
+             Title="GYM"
              BackgroundColor="{AppThemeBinding Dark=Black, Light=White }">
     <ContentPage.Content>
         <StackLayout Padding="10">
@@ -11,16 +12,16 @@
                    VerticalTextAlignment="Center"
                    TextColor="{AppThemeBinding Dark=White, Light=Black }"
                    Padding="10"/>
-            
-            <Entry x:Name="ExerciseName"
-                Placeholder="Enter exercise"
-                   HorizontalTextAlignment="Center"
-                 
-                Margin="0,0,0,10"
-                PlaceholderColor="{AppThemeBinding Dark=White, Light=Black }"
-                TextColor="{AppThemeBinding Dark=White, Light=Black }"
-                />
-            
+
+            <SearchBar x:Name="exerciseSearchBar" Placeholder="Search Exercise" TextChanged="OnExerciseSearchChanged" />
+            <ListView x:Name="myListView" SeparatorColor="#186049" ItemTapped="OnItemTapped" Refreshing="myListView_Refreshing" IsPullToRefreshEnabled="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" TextColor="Black" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
             <StackLayout Orientation="Horizontal">
                 <Entry x:Name="ExerciseWeight"
                         Placeholder="kg"
